@@ -1,0 +1,2800 @@
+╭─── Claude Code v2.1.84 ──────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting        │
+│               Welcome back Viswajith!              │ started                 │
+│                                                    │ Run /init to create a … │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ Recent activity         │
+│                        ▘▘ ▝▝                       │ No recent activity      │
+│      Sonnet 4.6 · Claude Pro ·                     │                         │
+│      viswajith@bs-infotech.com's Organization      │                         │
+│        C:\viswajith\Projects\Viswa\linkedin        │                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+> can you see the project 1 folder files?                                       
+
+  Read 3 files (ctrl+o to expand)
+
+● Here's what's in Project 1:
+
+  Project 1/
+  ├── 2026-02-06-Linkedin_project_1.txt
+  ├── app.py
+  ├── nul
+  ├── requirements.txt
+  ├── static/
+  │   ├── script.js
+  │   └── style.css
+  └── templates/
+      └── index.html
+
+  It looks like a Flask web app. What would you like to do with it?
+
+> this was one of the project i was created for the linked in post last week ,  
+you can see the @"Project 1\2026-02-06-Linkedin_project_1.txt" this was the     
+conversation i was stored that time. now we need to do the next linedin project 
+ for this week in project 2 folder.                                             
+
+  Read 1 file (ctrl+o to expand)
+
+● Now I have a clear picture. Project 1 was an AI LinkedIn Post Generator built
+  with Flask + Groq API + HTML/CSS/JS.
+
+  The project 2 folder is currently empty. What idea do you have in mind for
+  this week's LinkedIn project? Or would you like me to suggest something new
+  that builds on or complements what you did last week?
+
+> yes give me some idea i need a better idea okay.                              
+
+● Here are some solid ideas that fit your stack (Flask + Groq + HTML/CSS/JS) and
+   look impressive on LinkedIn:
+
+  ---
+  1. AI Resume Analyzer & Job Match Scorer
+  - Upload your resume (PDF/text) → paste a job description → AI scores the
+  match (0-100%) and tells you exactly what to improve
+  - Why it's great: Every job seeker needs this. Huge LinkedIn engagement
+  guaranteed
+  - Trending: ATS optimization is a hot topic right now
+
+  ---
+  2. AI Meeting Notes Summarizer
+  - Paste meeting transcript → AI gives summary, action items, decisions made,
+  and who is responsible
+  - Why it's great: Every company has this problem. Very practical
+  - Bonus: Add export to PDF/copy button
+
+  ---
+  3. AI Cold Email Generator
+  - Enter: target company, your role, your goal → AI writes a personalized cold
+  email + subject line
+  - Why it's great: Sales & job seekers love this. High shareability on LinkedIn
+
+  ---
+  4. AI Interview Coach
+  - Enter job role → AI gives you 10 interview questions + model answers for
+  that specific role
+  - Why it's great: Very relatable to your LinkedIn audience (job seekers,
+  developers)
+  - You can add a "Rate my answer" feature too
+
+  ---
+  5. AI Code Explainer & Debugger
+  - Paste code → AI explains it in simple English + finds bugs + suggests fixes
+  - Why it's great: Developer audience on LinkedIn will love and share this
+  - Shows your technical depth as an AI Developer
+
+  ---
+  My top pick for you: #1 (Resume Analyzer) or #4 (Interview Coach)
+
+  Both are highly relatable to your LinkedIn audience, easy to demo in a video,
+  and directly useful to people — which drives maximum engagement.
+
+  Which one catches your eye?
+
+> i like the 1st one                                                            
+
+● Great choice! Let me save some context about you and this project first, then
+  we'll start building.
+
+  Recalled 1 memory, wrote 3 memories (ctrl+o to expand)
+
+● Now here's what we'll build for Project 2 — AI Resume Analyzer & Job Match 
+  Scorer:
+
+  Features:
+  - Paste your resume text
+  - Paste the job description
+  - Click Analyze → AI gives:
+    - Match score (0-100%) with a visual progress bar
+    - Matched skills/keywords
+    - Missing skills to add
+    - Specific improvement tips
+    - Overall verdict
+
+  Same stack: Flask + Groq API + HTML/CSS/JS (clean modern design)
+
+  Before I start creating files — do you want to use the same Groq API key from
+  Project 1, or do you have a new one? Also, should I create a .env file for the
+   key like last time?
+
+✻ Sautéed for 34s
+
+> i will paste the resume text or upload the resume? and we need the same api   
+key itself. create a .env file. asnwer to my question first                     
+
+● You can paste the resume text — no file upload. Simple text area input, just
+  like Project 1 where you typed the topic.
+
+  Shall I start building now?
+
+> how it will be good the user will copy the text in the resume and paste in    
+that box?                                                                       
+
+● You're right, that's not a great experience. File upload (PDF) is much better
+  — user just clicks upload and selects their resume file directly.
+
+  And it looks more impressive for the LinkedIn post too. Shall I go with PDF
+  upload?
+
+> okay i like the pdf upload option. wait i will tell when to start the code    
+
+● Sure, take your time! I'll wait for your go-ahead.
+
+> one dout can you have the multi agent capacity?                               
+
+● Yes! I can run multiple agents in parallel — for example, one agent writing
+  the backend while another writes the frontend at the same time. This makes
+  building faster.
+
+  But for a project like this, it's straightforward enough that I'll handle it
+  directly without needing multiple agents. Unless you want something more
+  complex added?
+
+> okay if you have the capacity for the multi agent means how i can use that?   
+
+● You can use it by just telling me to run things in parallel. For example:
+
+  ▎ "build the frontend and backend at the same time"
+
+  I'll automatically split the work between agents and run them simultaneously,
+  then combine the results. It's faster when tasks are independent of each
+  other.
+
+  But it's all handled by me behind the scenes — you don't need to do anything
+  special, just ask normally.
+
+  Ready to start the project whenever you say go!
+
+> so like you are the main agent , you are telling backend codeing work to one  
+agent and frontend codeing work to another agent, you will combained both?      
+
+● Exactly! That's the right mental model:
+
+  - Me (main agent) — plan, coordinate, combine everything
+  - Agent 1 — writes the Flask backend (app.py, API routes, PDF parsing, Groq
+  integration)
+  - Agent 2 — writes the frontend (index.html, style.css, script.js)
+
+  Both run at the same time → I take both outputs → combine into the final
+  working project.
+
+  Want me to do it that way for this project? It'll be faster!
+
+> one more question like we can set each agent with different model or all the  
+agent will use the same model ?                                                 
+
+● Each agent can be set to a different model. For example:
+
+  - Main agent (me) — Sonnet 4.6 (coordinating)
+  - Backend agent — Opus 4.6 (more complex logic, PDF parsing, API integration)
+  - Frontend agent — Haiku 4.5 (faster, good enough for HTML/CSS/JS)
+
+  This way you use the right model for the right job — powerful models for
+  complex tasks, faster/cheaper models for simpler ones.
+
+  Ready to start the project? Say the word!
+
+> i need to set the model or you itself will deside which model want to use?    
+
+● I decide which model to use for each agent — you don't need to set anything.
+  I'll automatically assign the right model based on the complexity of the task.
+
+  Ready to start when you say go!
+
+> if i see use this model for the backend and use this model for the frontend   
+means you will use that right?                                                  
+
+● Yes, exactly! If you tell me specifically which model to use for each agent,
+  I'll follow your instruction. You have full control if you want it.
+
+  For example, just say:
+  ▎ "Use Opus for backend and Haiku for frontend"
+
+  And I'll do exactly that. Ready to start!
+
+> totally how many model you are having?                                        
+
+● Currently there are 3 Claude models available:
+
+  ┌────────────┬──────────────────────────────────────────────┐
+  │   Model    │                   Best For                   │
+  ├────────────┼──────────────────────────────────────────────┤
+  │ Opus 4.6   │ Complex logic, reasoning, hard tasks         │
+  ├────────────┼──────────────────────────────────────────────┤
+  │ Sonnet 4.6 │ Balanced — good quality + speed (that's me!) │
+  ├────────────┼──────────────────────────────────────────────┤
+  │ Haiku 4.5  │ Fast, lightweight, simple tasks              │
+  └────────────┴──────────────────────────────────────────────┘
+
+  These are all Claude models by Anthropic. That's what I can assign to agents.
+
+  Ready to start the project? Just say go!
+> i need to know what is the use of multi agent. explain easily                 
+
+● Simple explanation:
+
+  Without multi-agent:
+  - I do backend → wait → then do frontend → wait → done
+  - Everything is one by one (slower)
+
+  With multi-agent:
+  - Agent 1 does backend at the same time as Agent 2 does frontend
+  - Everything is parallel (faster)
+
+  Real benefit:
+  - Saves time on big projects
+  - Each agent focuses on only one thing, so better quality
+  - For small projects like yours, the difference is small but still useful
+
+  Think of it like a restaurant:
+  - Without: One chef cooks everything alone
+  - With: One chef cooks the main dish, another makes the sides — both at the
+  same time, food arrives faster
+
+  That's it! Simple as that. Want to use multi-agent for this project?
+
+> so when one agent doing the backend code and another agent was doing the      
+frontend code , how there will know correctly the connection between frontend   
+and backend?                                                                    
+
+● That's a really smart question!
+
+  The answer is — I (main agent) give both agents the blueprint before they 
+  start. For example:
+
+  - The API endpoint will be /analyze
+  - It accepts POST request with resume_file and job_description
+  - It returns { score, matched_skills, missing_skills, tips }
+
+  So both agents get this same blueprint upfront:
+  - Backend agent knows — "I need to build the /analyze endpoint that returns 
+  this exact response"
+  - Frontend agent knows — "I need to call /analyze and display score, 
+  matched_skills, missing_skills, tips"
+
+  Both follow the same contract → when combined, they connect perfectly.
+
+  It's like a construction project:
+  - Architect gives the same blueprint to the electrician and plumber
+  - Both work at the same time
+  - When done, everything fits together because they followed the same plan
+
+  Want me to do it this way for your project?
+
+> okay now you can completed the project                                        
+
+● Let me define the blueprint first, then launch both agents in parallel!
+
+  API Contract both agents will follow:
+  - Endpoint: POST /analyze
+  - Input: resume (PDF file) + job_description (text)
+  - Response: { score, matched_skills, missing_skills, tips, verdict }
+  ⎿  Invalid tool parameters
+
+● Write(project 2\.env)
+  ⎿  Wrote 1 lines to project 2\.env
+      1 GROQ_API_KEY=your_groq_api_key_here
+
+● Now launching both agents in parallel!
+
+● 2 agents finished (ctrl+o to expand)
+   ├─ Build Flask backend for Resume Analyzer · 0 tool uses
+   │  ⎿  Done
+   └─ Build frontend for Resume Analyzer · 6 tool uses · 25.1k tokens
+      ⎿  Done
+
+● Frontend is done! The backend agent hit an overload error — I'll write those
+  files directly now.
+
+● Write(project 2\requirements.txt)
+  ⎿  Wrote 5 lines to project 2\requirements.txt
+      1 flask==3.0.0
+      2 flask-cors==4.0.0
+      3 groq==0.4.1
+      4 python-dotenv==1.0.0
+      5 pdfplumber==0.10.3
+
+● Write(project 2\app.py)
+  ⎿  Wrote 94 lines to project 2\app.py
+       1 from flask import Flask, render_template, request, jsonify
+       2 from flask_cors import CORS
+       3 from groq import Groq
+       4 from dotenv import load_dotenv
+       5 import pdfplumber
+       6 import os
+       7 import json
+       8 import io
+       9 
+      10 load_dotenv()
+     … +84 lines (ctrl+o to expand)
+
+● All files are created! Here's the full project structure:
+
+  project 2/
+  ├── app.py              ✅ Flask backend
+  ├── requirements.txt    ✅ Dependencies
+  ├── .env                ✅ API key file
+  ├── templates/
+  │   └── index.html      ✅ Main page
+  └── static/
+      ├── style.css       ✅ Modern design
+      └── script.js       ✅ Frontend logic
+
+  To run the project:
+
+  1. Add your Groq API key to .env:
+  GROQ_API_KEY=your_actual_key_here
+  2. Install dependencies:
+  pip install -r requirements.txt
+  3. Run the app:
+  python app.py
+  4. Open http://localhost:5000 in your browser
+
+  Try it and let me know how it looks!
+
+✻ Cogitated for 5m 38s
+
+> PS C:\viswajith\Projects\Viswa\linkedin\project 2> python app.py              
+Traceback (most recent call last):                                              
+  File "C:\viswajith\Projects\Viswa\linkedin\project 2\app.py", line 15, in     
+<module>                                                                        
+    client = Groq(api_key=os.getenv("GROQ_API_KEY"))                            
+  File "C:\Users\BS -                                                           
+11\AppData\Roaming\Python\Python313\site-packages\groq\_client.py", line 95, in 
+ __init__                                                                       
+    super().__init__(                                                           
+    ~~~~~~~~~~~~~~~~^                                                           
+        version=__version__,                                                    
+        ^^^^^^^^^^^^^^^^^^^^                                                    
+    ...<6 lines>...                                                             
+        _strict_response_validation=_strict_response_validation,                
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                
+    )                                                                           
+    ^                                                                           
+  File "C:\Users\BS -                                                           
+11\AppData\Roaming\Python\Python313\site-packages\groq\_base_client.py", line   
+792, in __init__                                                                
+    self._client = http_client or SyncHttpxClientWrapper(                       
+                                  ~~~~~~~~~~~~~~~~~~~~~~^                       
+        base_url=base_url,                                                      
+        ^^^^^^^^^^^^^^^^^^                                                      
+    ...<5 lines>...                                                             
+        follow_redirects=True,                                                  
+        ^^^^^^^^^^^^^^^^^^^^^^                                                  
+    )                                                                           
+    ^                                                                           
+TypeError: Client.__init__() got an unexpected keyword argument 'proxies'       
+
+● The groq package version is outdated. Let me fix it.
+
+● Update(project 2\requirements.txt)
+  ⎿  Added 1 line, removed 1 line
+      1  flask==3.0.0
+      2  flask-cors==4.0.0
+      3 -groq==0.4.1                                                     
+      3 +groq==0.13.0                                                    
+      4  python-dotenv==1.0.0
+      5  pdfplumber==0.10.3
+
+● Now run:
+
+  pip install -r requirements.txt
+
+  Then run again:
+
+  python app.py
+
+> give me one best jd for this cv CAREER OBJECTIVE                              
+Dynamic and results-driven AI Developer with 1.3 years of professional          
+experience at                                                                   
+TRDFIN Support Service Pvt. Ltd., including its entity Billionaire Frequency    
+Code Media Pvt. Ltd.,                                                           
+complemented by a 6-month internship in Artificial Intelligence at Imagecon     
+India Pvt. Ltd.                                                                 
+Proficient in machine learning and deep learning, with a strong foundation in   
+developing and                                                                  
+implementing advanced AI solutions to solve complex challenges. Seeking to      
+leverage expertise                                                              
+in cutting-edge technologies to contribute to innovative and impactful projects 
+ in the field of                                                                
+artificial intelligence.                                                        
+                                                                                
+ WORK EXPERIENCE                                                                
+AI Developer                                                                    
+TRDFIN Support Service Pvt. Ltd.                                                
+Billionaire Frequency Code Media Pvt. Ltd. (Entity under TRDFIN Support Service 
+ Pvt. Ltd.)                                                                     
+FEB 2024 – Present (1.3 Years)                                                  
+ Developed and deployed AI solutions leveraging machine learning and deep      
+learning                                                                        
+models to address complex business challenges.                                  
+ Worked on diverse AI projects, including AI Videos, AI Images, Text           
+Extraction, case                                                                
+summarization, text summarization, chatbot development, text-to-image           
+generation,                                                                     
+image-to-text conversion, text-to-speech converter, speech-to-text converter,   
+language                                                                        
+translation and other AI tasks.                                                 
+                                                                                
+  INTERNSHIP EXPERIENCE                                                         
+AI-ARTIFICIAL INTELIGENCE                                                       
+Imagecon India Pvt. Ltd.                                                        
+JUNE 2023 – NOVEMBER 2023 (6 months)                                            
+ Worked on AI-based image processing and analysis projects, focusing on        
+developing                                                                      
+innovative solutions using deep learning frameworks.                            
+ Designed and trained neural networks for image classification using advanced  
+convolutional neural network (CNN) techniques, improving model accuracy and     
+efficiency.                                                                     
+ Conducted research and optimized algorithms for better predictive modeling in 
+ machine                                                                        
+learning, enhancing the performance of AI-driven solutions.                     
+                                                                                
+  SKILLS                                                                        
+ Programming Languages: Python, PostgreSQL                                     
+ Frameworks and Libraries: Flask, Hugging Face, Civitai, Transformers          
+,TensorFlow,                                                                    
+PyTorch, Scikit-learn, Keras, SpaCy, NLTK, matplotlib                           
+ Version Control: Git, GitHub                                                  
+ Natural Language Processing (NLP): Text preprocessing, Sentiment analysis,    
+Named Entity                                                                    
+Recognition (NER), Text summarization, Language translation, Chatbot            
+development                                                                     
+ Machine Learning (ML): Simple Linear Regression, Multiple Linear Regression,  
+Polynomial                                                                      
+Regression, Logistic Regression, KNN Algorithm, Support Vector Machine (SVM),   
+Decision                                                                        
+Tree, Random Forest, Naive Bayes Algorithm                                      
+ Deep Learning (DL): Artificial Neural Networks, Convolutional Neural          
+Networks, Recurrent                                                             
+Neural Networks, Autoencoders, Boltzmann Machines                               
+ Integrated Development Environments (IDE): Spyder, VS Code, IDLE              
+                                                                                
+                                                                                
+                                                                                
+PROJECTS                                                                        
+1. AI Image and Video Generation                                                
+Abstract: This project involved generating AI-based images and videos for       
+promotional purposes                                                            
+using advanced generative models. Leveraging pre-trained models from Hugging    
+Face and Civitai                                                                
+through the ComfyUI interface, I developed high-quality visual content aligned  
+with specific                                                                   
+marketing objectives. These AI-generated assets were used to promote various    
+companies and                                                                   
+products, including Fasta Pizza, EEB Engineering, Consulven, BFC Media Pvt ltd, 
+ and Prime Council                                                              
+Solution. The project significantly enhanced the company’s creative output,     
+allowing for rapid, cost                                                        
+effective, and visually compelling promotional material.                        
+Role: AI Developer                                                              
+Language Used: Python, ComfyUI, Hugging Face, Civitai                           
+2. Chatbot for Fasta Pizza E-Commerce Website                                   
+Abstract: This project involved developing an intelligent chatbot for the Fasta 
+ Pizza e-commerce                                                               
+website to enhance user experience and streamline customer interactions. The    
+chatbot offers five                                                             
+default options: Menu Assistance, Track Current Order, Queries and Feedback,    
+View Offers and                                                                 
+Combos, and Store Near Me.                                                      
+ Menu Assistance: Displays available products; users can select a product to   
+view detailed                                                                   
+descriptions and definitions.                                                   
+ Track Current Order: Asks for the user's phone number to generate an OTP for  
+verification. After                                                             
+OTP verification, users provide an order number to retrieve the real-time       
+status of their order.                                                          
+ Queries and Feedback: Offers four options—Product Information, General        
+Queries, Feedback, and                                                          
+Order-Related Issues. User inputs are stored in the database for analysis and   
+resolution.                                                                     
+ View Offers and Combos: Displays ongoing offers and combo deals.              
+ Store Near Me: Provides two options for finding nearby stores—allowing        
+location access to                                                              
+generate the nearest store address or manually typing the location to retrieve  
+store details based                                                             
+on the area.                                                                    
+The chatbot integrates natural language processing (NLP) techniques for         
+seamless user interaction                                                       
+and backend functionalities like database updates and OTP verification for      
+secure processes.                                                               
+Duration: 4 Months                                                              
+Role: AI Developer                                                              
+Language Used: Python, PostgreSQL                                               
+Framework: Flask                                                                
+3. Legal Case Document Summarization                                            
+Abstract:                                                                       
+This project focused on automating the extraction and summarization of key      
+information from                                                                
+legal case documents. When a user uploads a legal document, the system          
+processes it to extract                                                         
+essential details such as the title of the case, case number, petitioner name,  
+respondent name,                                                                
+case type, final verdict, name of the court, governing law, relevant sections   
+and articles, and a                                                             
+500-word summary of the case. By leveraging natural language processing (NLP)   
+techniques and                                                                  
+AI models, the system ensures accurate information retrieval and concise        
+summarization. The                                                              
+entire project, from backend development to frontend deployment, was completed  
+independently by me, ensuring a seamless and efficient workflow.                
+Duration: 3 Months                                                              
+Role: AI Developer                                                              
+Tools/Technologies: Python, Streamlit, NLP, Pre-trained AI Models               
+4. Export Invoice PDF Data Extraction                                           
+Abstract:                                                                       
+This project involved developing a system to automate the extraction of key     
+information from                                                                
+export invoice PDF files. Upon uploading a document, the system accurately      
+extracts specific                                                               
+details such as exporter name, invoice number, invoice date, customer order     
+number, consignee                                                               
+name, notify party, buyer name, port of discharge, place of delivery, terms of  
+delivery and                                                                    
+payment, and description of goods. The application was built using Python with  
+pre-trained                                                                     
+models for document parsing and a Streamlit-based front end. Designed to run    
+offline with a                                                                  
+response time under 6 seconds, the project was developed end-to-end by me to    
+meet the client’s                                                               
+performance and deployment requirements.                                        
+Duration: 3 Months                                                              
+Role: AI Developer                                                              
+Tools/Technologies: Python, Pre-trained Models, Streamlit                       
+5. Language Translation System                                                  
+Abstract: This project focused on building a language translation system that   
+can convert text from                                                           
+any language into another language. Leveraging Python libraries and machine     
+learning techniques,                                                            
+the system supports real-time translation, making it easier to bridge           
+communication gaps and work                                                     
+with multilingual content. The system ensures accurate translations for various 
+ use cases, such as                                                             
+customer support, content localization, and cross-language communication.       
+Duration: 1 Months                                                              
+Role: AI Developer                                                              
+Language Used: Python                                                           
+Framework: Python Libraries ( Hugging Face, Google Translate Library)           
+CERTIFICATIONS                                                                  
+Microsoft Learn AI Skills Challenge - Microsoft.                                
+Basic in Python for AI & ML - Great Learning.                                   
+AI in Marketing  - Udemy                                                        
+LinkedIn - https://www.linkedin.com/in/viswajith-m-5a382b21a                    
+GitHub - https://github.com/visw20                                              
+Education                                                                       
+Bachelor of Engineering in Mechanical, Dhirajlal Gandhi College of Technology,  
+Salem -                                                                         
+2017-2021 with 75%                                                              
+HSC – Golden Spark Metric Hr. Sec. School, Salem - 2015-2017 with 76%           
+SSLC - Golden Spark Metric Hr. Sec. School, Salem - 2015 with 85%               
+
+● Here's a JD that matches your profile well — good for testing the project:
+
+  ---
+  Job Title: AI Developer
+  Company: TechNova Solutions Pvt. Ltd.
+  Location: Chennai / Bangalore (Hybrid)
+  Experience: 1–3 Years
+
+  About the Role:
+  We are looking for a passionate AI Developer to join our growing team. You
+  will design, develop, and deploy AI-powered solutions that solve real business
+   problems across NLP, computer vision, and generative AI domains.
+
+  Responsibilities:
+  - Develop and deploy machine learning and deep learning models for production
+  use cases
+  - Build NLP pipelines including text summarization, sentiment analysis, named
+  entity recognition, and chatbot development
+  - Work on generative AI projects including text-to-image and AI content
+  generation
+  - Develop RESTful APIs using Flask to expose AI models as services
+  - Extract and process data from documents (PDFs, invoices, legal documents)
+  - Collaborate with cross-functional teams to understand business requirements
+  and deliver AI solutions
+  - Maintain code using Git and GitHub with proper version control practices
+
+  Required Skills:
+  - Python programming (strong)
+  - Machine Learning: Regression, Classification, SVM, Decision Tree, Random
+  Forest
+  - Deep Learning: CNN, RNN, ANN using TensorFlow, PyTorch, or Keras
+  - NLP: Text preprocessing, summarization, translation, chatbot development
+  using SpaCy, NLTK, Transformers
+  - Web framework: Flask
+  - Database: PostgreSQL
+  - Hugging Face models and pre-trained AI models
+  - Version Control: Git, GitHub
+
+  Good to Have:
+  - Experience with Generative AI tools (Stable Diffusion, ComfyUI, Civitai)
+  - Docker, cloud deployment (AWS/GCP/Azure)
+  - LangChain or LLM API integration
+  - Knowledge of MLOps practices
+
+  Education:
+  - B.E / B.Tech in any discipline (CS preferred but not mandatory)
+
+  ---
+  This JD will give you a high match score (80–90%) which looks great for the
+  LinkedIn demo. The missing skills like Docker and cloud will show up as areas
+  to improve — makes the result realistic and useful.
+
+> i think the percentage was not working it was alwasys showing 0 only          
+
+  Read 1 file (ctrl+o to expand)
+
+● The JS looks fine. The issue is likely in the HTML — the SVG circle needs
+  stroke-dasharray set. Let me check.
+
+  Read 1 file (ctrl+o to expand)
+
+● The HTML SVG looks fine. Let me check the CSS — it might be overriding the
+  stroke-dashoffset inline style.
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+● The CSS is fine. The issue is likely the API response key not matching — Groq
+  might be returning a different key name like match_score instead of score. Let
+   me add a quick debug log to confirm.
+
+● Update(project 2\static\script.js)
+  ⎿  Added 1 line
+      206        }
+      207  
+      208        const data = await response.json();
+      209 +      console.log('API Response:', data);                     
+      210        setLoadingState(false);
+      211        renderResults(data);
+      212  
+
+● Now do this:
+
+  1. Run the app → python app.py
+  2. Open the browser → press F12 → go to Console tab
+  3. Submit a resume and JD
+  4. Look at what API Response: prints in the console
+
+  Share what you see there — that will tell us exactly what the API is returning
+   and why the score is 0.
+
+✻ Churned for 1m 29s
+
+> API Response: {matched_skills: Array(12), missing_skills: Array(4), score:    
+85, tips: Array(4), verdict: 'Your resume demonstrates a strong foundation in   
+AI…ou can become a highly sought-after AI developer.'}matched_skills:           
+Array(12)0: "Python"1: "Machine Learning"2: "Deep Learning"3: "NLP"4: "Flask"5: 
+ "PostgreSQL"6: "Git"7: "GitHub"8: "Hugging Face"9: "Transformers"10: "Text     
+summarization"11: "Chatbot development"length: 12[[Prototype]]: Array(0)at: ƒ   
+at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries:  
+ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ              
+find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ            
+findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes:  
+ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ      
+lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ           
+reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice:  
+ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ        
+toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ    
+toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ  
+with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, 
+ copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]:      
+Objectmissing_skills: Array(4)0: "Docker"1: "Cloud deployment                   
+(AWS/GCP/Azure)"2: "LangChain or LLM API integration"3: "MLOps                  
+practices"length: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ                   
+concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ              
+entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ                
+find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ            
+findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes:  
+ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ      
+lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ           
+reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice:  
+ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ        
+toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ    
+toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ  
+with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, 
+ copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]:      
+Objectscore: 85tips: Array(4)0: "Consider acquiring experience with Generative  
+AI tools like Stable Diffusion to enhance your skill set"1: "Familiarize        
+yourself with Docker and cloud deployment to improve your deployment            
+capabilities"2: "Explore LangChain or LLM API integration to expand your NLP    
+expertise"3: "Develop knowledge of MLOps practices to streamline your AI        
+development workflow"length: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ        
+concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ              
+entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ                
+find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ            
+findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes:  
+ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ      
+lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ           
+reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice:  
+ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ        
+toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ    
+toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ  
+with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, 
+ copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]:      
+Objectverdict: "Your resume demonstrates a strong foundation in AI development, 
+ but consider expanding your skill set to include emerging technologies and     
+practices to remain competitive in the field. With some additional experience   
+and skills, you can become a highly sought-after AI developer."[[Prototype]]:   
+Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ 
+ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ 
+ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ  
+__defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ     
+__lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get     
+__proto__: ƒ __proto__()set __proto__: ƒ __proto__()                            
+
+● The API data is perfect — score: 85, all skills and tips are correct. So the
+  bug is in the animation itself.
+
+  The issue is scoreProgress.className = ... — that's an SVG element, and you
+  can't set .className directly on SVG like HTML. It uses SVGAnimatedString
+  which causes a silent error that stops the animation before it starts, leaving
+   the number at 0.
+
+● Update(project 2\static\script.js)
+  ⎿  Added 1 line, removed 1 line
+      322                       : targetScore <= 70 ? 'score-orange'
+      323                       : 'score-green';
+      324  
+      325 -    scoreProgress.className = 'score-progress ' + colorClass; 
+      325 +    scoreProgress.setAttribute('class', 'score-progress ' + co
+          +lorClass);                                                    
+      326      scoreNumber.className = 'score-number ' + colorClass;
+      327  
+      328      // Determine label
+
+● Also fix the reset in the re-analyze button which has the same issue:
+
+● Update(project 2\static\script.js)
+  ⎿  Added 1 line, removed 1 line
+      456      // Reset score display
+      457      scoreNumber.textContent = '0';
+      458      scoreNumber.className = 'score-number';
+      459 -    scoreProgress.className = 'score-progress';               
+      459 +    scoreProgress.setAttribute('class', 'score-progress');    
+      460      scoreProgress.style.strokeDashoffset = CIRCLE_CIRCUMFERENC
+           E;
+      461      scoreTag.textContent = 'Match';
+      462  
+
+● Now refresh the page and try again — the score should animate up to 85!
+
+✻ Crunched for 53s
+
+> give me one week and fair jd also                                             
+
+● Here's a Fair Match JD (should score around 50–65%):
+
+  ---
+  Job Title: MLOps / AI Infrastructure Engineer
+  Company: DataSync Technologies
+  Location: Hyderabad / Remote
+  Experience: 2–4 Years
+
+  About the Role:
+  We are looking for an MLOps Engineer to bridge the gap between AI model
+  development and production deployment. You will build and maintain scalable ML
+   pipelines, automate model deployment, and monitor AI systems in production
+  environments.
+
+  Responsibilities:
+  - Design and maintain end-to-end ML pipelines from data ingestion to model
+  serving
+  - Containerize AI/ML applications using Docker and Kubernetes
+  - Deploy and monitor models on cloud platforms (AWS SageMaker, GCP Vertex AI,
+  or Azure ML)
+  - Build CI/CD pipelines for automated model training and deployment using
+  GitHub Actions or Jenkins
+  - Implement model monitoring for drift detection, performance degradation, and
+   alerting
+  - Manage feature stores and experiment tracking using MLflow or DVC
+  - Collaborate with data scientists to optimize model performance and inference
+   speed
+  - Work with distributed computing frameworks like Apache Spark or Ray
+
+  Required Skills:
+  - Python programming
+  - Docker and Kubernetes (containerization and orchestration)
+  - Cloud platforms: AWS, GCP, or Azure (hands-on deployment experience)
+  - CI/CD pipelines: GitHub Actions, Jenkins, or GitLab CI
+  - ML frameworks: TensorFlow or PyTorch
+  - MLflow or similar experiment tracking tools
+  - Linux/Shell scripting
+  - Git and GitHub
+
+  Good to Have:
+  - LangChain or LLM deployment experience
+  - Apache Kafka for real-time data streaming
+  - Terraform for infrastructure as code
+  - Experience with Prometheus and Grafana for monitoring
+  - Knowledge of FastAPI for model serving
+
+  Education:
+  - B.E / B.Tech in Computer Science, IT, or related field
+
+  ---
+  This will show a fair match because you have Python, TensorFlow, PyTorch,
+  Git/GitHub — but Docker, Kubernetes, cloud deployment, CI/CD, and MLflow are
+  missing from your resume. Makes the result realistic and useful for demo
+  purposes.
+
+> weak                                                                          
+
+● Here's a Weak Match JD (should score around 20–35%):
+
+  ---
+  Job Title: Data Engineer / Big Data Specialist
+  Company: CloudStream Analytics
+  Location: Pune / Bangalore
+  Experience: 3–5 Years
+
+  About the Role:
+  We are looking for an experienced Data Engineer to design, build, and maintain
+   large-scale data infrastructure and pipelines that power our analytics and
+  business intelligence platforms.
+
+  Responsibilities:
+  - Design and build scalable data pipelines using Apache Spark, Kafka, and
+  Airflow
+  - Develop and maintain data warehouses on Snowflake or BigQuery
+  - Build and optimize ETL/ELT pipelines for large datasets
+  - Work with real-time streaming data using Apache Flink or Kafka Streams
+  - Manage cloud infrastructure on AWS (Redshift, S3, Glue, Lambda) or GCP
+  (BigQuery, Dataflow)
+  - Write complex SQL queries and optimize database performance
+  - Implement data governance, data quality checks, and lineage tracking
+  - Collaborate with BI teams to build dashboards using Tableau or Power BI
+  - Work with dbt (data build tool) for data transformation
+
+  Required Skills:
+  - Python or Scala or Java programming
+  - Apache Spark, Hadoop, or Flink
+  - Apache Kafka or Kinesis (real-time streaming)
+  - Cloud platforms: AWS or GCP (data services)
+  - SQL: advanced queries, query optimization, indexing
+  - Data warehousing: Snowflake, BigQuery, or Redshift
+  - ETL tools: Apache Airflow, dbt, or AWS Glue
+  - Docker and Kubernetes
+
+  Good to Have:
+  - Tableau or Power BI dashboard development
+  - Terraform for infrastructure as code
+  - Knowledge of data mesh or data lakehouse architecture
+  - Experience with Delta Lake or Apache Iceberg
+  - Databricks platform experience
+
+  Education:
+  - B.E / B.Tech in Computer Science or related field
+
+  ---
+  This will show a weak match because almost none of these skills (Spark, Kafka,
+   Snowflake, BigQuery, Airflow, Tableau, Scala) are in your resume. Only Python
+   and Git will partially match — giving a low score of around 20–35%.
+
+> can you see the project 1 files?                                              
+
+  Read 1 file (ctrl+o to expand)
+
+● Yes! Project 1 has:
+
+  Project 1/
+  ├── 2026-02-06-Linkedin_project_1.txt   ← conversation log
+  ├── app.py                               ← Flask backend
+  ├── requirements.txt                     ← dependencies
+  ├── nul                                  ← (empty file, can be deleted)
+  ├── static/
+  │   ├── style.css
+  │   └── script.js
+  └── templates/
+      └── index.html
+
+  What do you need from it?
+
+> i need a better frontend , so make the code changes for better looking.       
+
+● Let me read all the frontend files first.
+
+  Read 3 files (ctrl+o to expand)
+
+● I have a full picture of the current design. I'll now completely redesign the
+  HTML and CSS with a modern dark navy/LinkedIn-blue theme. The JS doesn't need
+  changes.
+
+● Write(Project 1\templates\index.html)
+  ⎿  Added 191 lines, removed 48 lines
+       3  <head>
+       4      <meta charset="UTF-8">
+       5      <meta name="viewport" content="width=device-width, initial-
+          scale=1.0">
+       6 -    <title>AI LinkedIn Post Generator & Analyzer</title>       
+       6 +    <title>AI LinkedIn Studio</title>                          
+       7      <link rel="stylesheet" href="{{ url_for('static', filename=
+          'style.css') }}">
+       8      <link rel="preconnect" href="https://fonts.googleapis.com">
+       9      <link rel="preconnect" href="https://fonts.gstatic.com" cro
+          ssorigin>
+      10 -    <link href="https://fonts.googleapis.com/css2?family=Inter:
+         -wght@400;500;600;700&display=swap" rel="stylesheet">           
+      10 +    <link href="https://fonts.googleapis.com/css2?family=Inter:
+         +wght@300;400;500;600;700;800&display=swap" rel="stylesheet">   
+      11  </head>
+      12  <body>
+      13 +                                                               
+      14 +    <!-- Animated Background -->                               
+      15 +    <div class="bg-orbs">                                      
+      16 +        <div class="orb orb-1"></div>                          
+      17 +        <div class="orb orb-2"></div>                          
+      18 +        <div class="orb orb-3"></div>                          
+      19 +    </div>                                                     
+      20 +                                                               
+      21      <div class="container">
+      22 +                                                               
+      23          <!-- Header -->
+      24          <header class="header">
+      16 -            <div class="logo">                                 
+      17 -                <svg width="40" height="40" viewBox="0 0 40 40"
+         - fill="none">                                                  
+      18 -                    <rect width="40" height="40" rx="8" fill="#
+         -D96C3F"/>                                                      
+      19 -                    <path d="M12 28V16H16V28H12ZM14 14C12.9 14 
+         -12 13.1 12 12C12 10.9 12.9 10 14 10C15.1 10 16 10.9 16 12C16 13
+         -.1 15.1 14 14 14ZM28 28H24V22C24 20.9 23.1 20 22 20C20.9 20 20 
+         -20.9 20 22V28H16V16H20V17.5C20.8 16.6 22.3 16 23.5 16C26 16 28 
+         -18 28 20.5V28Z" fill="white"/>                                 
+      20 -                </svg>                                         
+      21 -                <h1>AI LinkedIn Studio</h1>                    
+      25 +            <div class="header-inner">                         
+      26 +                <div class="logo">                             
+      27 +                    <div class="logo-icon">                    
+      28 +                        <svg width="28" height="28" viewBox="0 
+         +0 40 40" fill="none">                                          
+      29 +                            <path d="M12 28V16H16V28H12ZM14 14C
+         +12.9 14 12 13.1 12 12C12 10.9 12.9 10 14 10C15.1 10 16 10.9 16 
+         +12C16 13.1 15.1 14 14 14ZM28 28H24V22C24 20.9 23.1 20 22 20C20.
+         +9 20 20 20.9 20 22V28H16V16H20V17.5C20.8 16.6 22.3 16 23.5 16C2
+         +6 16 28 18 28 20.5V28Z" fill="white"/>                         
+      30 +                        </svg>                                 
+      31 +                    </div>                                     
+      32 +                    <div class="logo-text">                    
+      33 +                        <h1>AI LinkedIn Studio</h1>            
+      34 +                        <span class="live-badge"><span class="l
+         +ive-dot"></span>Powered by Groq AI</span>                      
+      35 +                    </div>                                     
+      36 +                </div>                                         
+      37 +                <p class="subtitle">Generate, Improve &amp; Ana
+         +lyze your LinkedIn posts with AI</p>                           
+      38              </div>
+      23 -            <p class="subtitle">Generate, Analyze & Optimize yo
+         -ur LinkedIn posts with AI</p>                                  
+      39          </header>
+      40  
+      41          <!-- Tab Navigation -->
+      42          <div class="tabs">
+      43              <button class="tab-btn active" data-tab="generate">
+      29 -                <span class="tab-icon">✨</span>               
+      44 +                <svg width="18" height="18" viewBox="0 0 24 24"
+         + fill="none" stroke="currentColor" stroke-width="2" stroke-line
+         +cap="round" stroke-linejoin="round">                           
+      45 +                    <polygon points="13 2 3 14 12 14 11 22 21 1
+         +0 12 10 13 2"/>                                                
+      46 +                </svg>                                         
+      47                  Generate Post
+      48              </button>
+      49              <button class="tab-btn" data-tab="improve">
+      33 -                <span class="tab-icon">🚀</span>               
+      50 +                <svg width="18" height="18" viewBox="0 0 24 24"
+         + fill="none" stroke="currentColor" stroke-width="2" stroke-line
+         +cap="round" stroke-linejoin="round">                           
+      51 +                    <path d="M12 20h9"/><path d="M16.5 3.5a2.12
+         +1 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>                   
+      52 +                </svg>                                         
+      53                  Improve Post
+      54              </button>
+      55              <button class="tab-btn" data-tab="analyze">
+      37 -                <span class="tab-icon">📊</span>               
+      56 +                <svg width="18" height="18" viewBox="0 0 24 24"
+         + fill="none" stroke="currentColor" stroke-width="2" stroke-line
+         +cap="round" stroke-linejoin="round">                           
+      57 +                    <line x1="18" y1="20" x2="18" y2="10"/><lin
+         +e x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y
+         +2="14"/>                                                       
+      58 +                </svg>                                         
+      59                  Analyze Post
+      60              </button>
+      61          </div>
+     ...
+       79                          <label>Choose Post Type</label>
+       80                          <div class="post-types">
+       81                              <button class="post-type-btn activ
+           e" data-type="technical">
+       61 -                                <span class="icon">💻</span>  
+       82 +                                <span class="post-type-icon"> 
+       83 +                                    <svg width="22" height="22
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2" stroke-linecap="round" stroke-linejoin="round">    
+       84 +                                        <polyline points="16 1
+          +8 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>             
+       85 +                                    </svg>                    
+       86 +                                </span>                       
+       87                                  <span>Technical</span>
+       88                              </button>
+       89                              <button class="post-type-btn" data
+           -type="achievement">
+       65 -                                <span class="icon">🏆</span>  
+       90 +                                <span class="post-type-icon"> 
+       91 +                                    <svg width="22" height="22
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2" stroke-linecap="round" stroke-linejoin="round">    
+       92 +                                        <circle cx="12" cy="8"
+          + r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>   
+       93 +                                    </svg>                    
+       94 +                                </span>                       
+       95                                  <span>Achievement</span>
+       96                              </button>
+       97                              <button class="post-type-btn" data
+           -type="tips">
+       69 -                                <span class="icon">💡</span>  
+       98 +                                <span class="post-type-icon"> 
+       99 +                                    <svg width="22" height="22
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2" stroke-linecap="round" stroke-linejoin="round">    
+      100 +                                        <circle cx="12" cy="12
+          +" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" 
+          +y1="16" x2="12.01" y2="16"/>                                  
+      101 +                                    </svg>                    
+      102 +                                </span>                       
+      103                                  <span>Tips</span>
+      104                              </button>
+      105                              <button class="post-type-btn" data
+           -type="story">
+       73 -                                <span class="icon">📖</span>  
+      106 +                                <span class="post-type-icon"> 
+      107 +                                    <svg width="22" height="22
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2" stroke-linecap="round" stroke-linejoin="round">    
+      108 +                                        <path d="M4 19.5A2.5 2
+          +.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4
+          + 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>                             
+      109 +                                    </svg>                    
+      110 +                                </span>                       
+      111                                  <span>Story</span>
+      112                              </button>
+      113                          </div>
+      114                      </div>
+      115  
+       79 -                    <button id="generateBtn" class="generate-b
+          -tn">                                                          
+       80 -                        <span class="btn-text">Generate Post</
+          -span>                                                         
+      116 +                    <button id="generateBtn" class="primary-bt
+          +n">                                                           
+      117 +                        <span class="btn-text">               
+      118 +                            <svg width="18" height="18" viewBo
+          +x="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
+          +2" stroke-linecap="round" stroke-linejoin="round">            
+      119 +                                <polygon points="13 2 3 14 12 
+          +14 11 22 21 10 12 10 13 2"/>                                  
+      120 +                            </svg>                            
+      121 +                            Generate Post                     
+      122 +                        </span>                               
+      123                          <span class="btn-loader" style="displa
+           y: none;">
+      124                              <svg class="spinner" viewBox="0 0 
+           50 50">
+      125                                  <circle class="path" cx="25" c
+           y="25" r="20" fill="none" stroke-width="5"></circle>
+      126                              </svg>
+      127 +                            Generating...                     
+      128                          </span>
+      129                      </button>
+      130                  </div>
+     ...
+      132                  <!-- Generated Output -->
+      133                  <div class="output-section" id="generateOutput
+           " style="display: none;">
+      134                      <div class="output-header">
+       92 -                        <h2>Generated Post</h2>               
+      135 +                        <div class="output-title">            
+      136 +                            <div class="output-title-icon">   
+      137 +                                <svg width="18" height="18" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2">                                                       
+      138 +                                    <polyline points="20 6 9 1
+          +7 4 12"/>                                                     
+      139 +                                </svg>                        
+      140 +                            </div>                            
+      141 +                            <h2>Generated Post</h2>           
+      142 +                        </div>                                
+      143                          <div class="output-actions">
+      144                              <button id="getHashtagsBtn" class=
+           "action-btn">
+       95 -                                <span class="icon">🏷️</span>  
+       96 -                                Get Hashtags                  
+      145 +                                <svg width="16" height="16" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2" stroke-linecap="round" stroke-linejoin="round">        
+      146 +                                    <line x1="4" y1="9" x2="20
+          +" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/>              
+      147 +                                    <line x1="10" y1="3" x2="8
+          +" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/>             
+      148 +                                </svg>                        
+      149 +                                Hashtags                      
+      150                              </button>
+      151                              <button id="copyBtn" class="action
+           -btn">
+       99 -                                <svg width="20" height="20" vi
+          -ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          -th="2">                                                       
+      152 +                                <svg width="16" height="16" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2">                                                       
+      153                                      <rect x="9" y="9" width="1
+           3" height="13" rx="2" ry="2"></rect>
+      154                                      <path d="M5 15H4a2 2 0 0 1
+           -2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      155                                  </svg>
+      156                                  Copy
+      157                              </button>
+      158                              <button id="regenerateBtn" class="
+           action-btn">
+      106 -                                <svg width="20" height="20" vi
+          -ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          -th="2">                                                       
+      159 +                                <svg width="16" height="16" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2">                                                       
+      160                                      <polyline points="23 4 23 
+           10 17 10"></polyline>
+      161                                      <path d="M20.49 15a9 9 0 1
+            1-2.12-9.36L23 10"></path>
+      162                                  </svg>
+     ...
+      164                              </button>
+      165                          </div>
+      166                      </div>
+      167 +                                                              
+      168                      <div class="post-preview">
+      169 +                        <div class="preview-profile">         
+      170 +                            <div class="preview-avatar">V</div
+          +>                                                             
+      171 +                            <div class="preview-meta">        
+      172 +                                <div class="preview-name">Visw
+          +ajith M</div>                                                 
+      173 +                                <div class="preview-role">AI D
+          +eveloper • Just now</div>                                     
+      174 +                            </div>                            
+      175 +                        </div>                                
+      176                          <div class="post-content" id="generate
+           dPost"></div>
+      177                      </div>
+      178                      <div class="char-count" id="charCount">0 c
+           haracters</div>
+     ...
+      194                          ></textarea>
+      195                      </div>
+      196  
+      136 -                    <button id="improveBtn" class="generate-bt
+          -n">                                                           
+      137 -                        <span class="btn-text">✨ Improve My P
+          -ost</span>                                                    
+      197 +                    <button id="improveBtn" class="primary-btn
+          +">                                                            
+      198 +                        <span class="btn-text">               
+      199 +                            <svg width="18" height="18" viewBo
+          +x="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
+          +2" stroke-linecap="round" stroke-linejoin="round">            
+      200 +                                <path d="M12 20h9"/><path d="M
+          +16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>     
+      201 +                            </svg>                            
+      202 +                            Improve My Post                   
+      203 +                        </span>                               
+      204                          <span class="btn-loader" style="displa
+           y: none;">
+      205                              <svg class="spinner" viewBox="0 0 
+           50 50">
+      206                                  <circle class="path" cx="25" c
+           y="25" r="20" fill="none" stroke-width="5"></circle>
+      207                              </svg>
+      208 +                            Improving...                      
+      209                          </span>
+      210                      </button>
+      211                  </div>
+      212  
+      146 -                <!-- Improved Output (Before/After) -->       
+      213 +                <!-- Improved Output -->                      
+      214                  <div class="output-section" id="improveOutput"
+            style="display: none;">
+      148 -                    <h2>Before & After Comparison</h2>        
+      215 +                    <div class="output-title" style="margin-bo
+          +ttom: 20px;">                                                 
+      216 +                        <div class="output-title-icon">       
+      217 +                            <svg width="18" height="18" viewBo
+          +x="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
+          +2">                                                           
+      218 +                                <polyline points="20 6 9 17 4 
+          +12"/>                                                         
+      219 +                            </svg>                            
+      220 +                        </div>                                
+      221 +                        <h2>Before &amp; After Comparison</h2>
+      222 +                    </div>                                    
+      223                      <div class="comparison-grid">
+      224                          <div class="comparison-card">
+      151 -                            <h3>📝 Original Post</h3>         
+      152 -                            <div class="post-preview">        
+      153 -                                <div class="post-content" id="
+          -originalPost"></div>                                          
+      225 +                            <div class="comparison-card-header
+          + original">                                                   
+      226 +                                <svg width="16" height="16" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2">                                                       
+      227 +                                    <path d="M14 2H6a2 2 0 0 0
+          +-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>                  
+      228 +                                    <polyline points="14 2 14 
+          +8 20 8"/>                                                     
+      229 +                                </svg>                        
+      230 +                                Original Post                 
+      231                              </div>
+      232 +                            <div class="post-content" id="orig
+          +inalPost"></div>                                              
+      233                          </div>
+      156 -                        <div class="comparison-card improved">
+      157 -                            <h3>✨ Improved Post</h3>         
+      158 -                            <div class="post-preview">        
+      159 -                                <div class="post-content" id="
+          -improvedPost"></div>                                          
+      234 +                        <div class="comparison-card improved-c
+          +ard">                                                         
+      235 +                            <div class="comparison-card-header
+          + improved">                                                   
+      236 +                                <svg width="16" height="16" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2" stroke-linecap="round" stroke-linejoin="round">        
+      237 +                                    <polygon points="13 2 3 14
+          + 12 14 11 22 21 10 12 10 13 2"/>                              
+      238 +                                </svg>                        
+      239 +                                Improved Post                 
+      240                              </div>
+      241 +                            <div class="post-content" id="impr
+          +ovedPost"></div>                                              
+      242                              <button id="copyImprovedBtn" class
+           ="action-btn full-width">
+      162 -                                <svg width="20" height="20" vi
+          -ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          -th="2">                                                       
+      243 +                                <svg width="16" height="16" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2">                                                       
+      244                                      <rect x="9" y="9" width="1
+           3" height="13" rx="2" ry="2"></rect>
+      245                                      <path d="M5 15H4a2 2 0 0 1
+           -2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      246                                  </svg>
+     ...
+      263                          ></textarea>
+      264                      </div>
+      265  
+      185 -                    <button id="analyzeBtn" class="generate-bt
+          -n">                                                           
+      186 -                        <span class="btn-text">📊 Analyze Post
+          -</span>                                                       
+      266 +                    <button id="analyzeBtn" class="primary-btn
+          +">                                                            
+      267 +                        <span class="btn-text">               
+      268 +                            <svg width="18" height="18" viewBo
+          +x="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
+          +2" stroke-linecap="round" stroke-linejoin="round">            
+      269 +                                <line x1="18" y1="20" x2="18" 
+          +y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1
+          +="20" x2="6" y2="14"/>                                        
+      270 +                            </svg>                            
+      271 +                            Analyze Post                      
+      272 +                        </span>                               
+      273                          <span class="btn-loader" style="displa
+           y: none;">
+      274                              <svg class="spinner" viewBox="0 0 
+           50 50">
+      275                                  <circle class="path" cx="25" c
+           y="25" r="20" fill="none" stroke-width="5"></circle>
+      276                              </svg>
+      277 +                            Analyzing...                      
+      278                          </span>
+      279                      </button>
+      280                  </div>
+      281  
+      282                  <!-- Analysis Results -->
+      283                  <div class="output-section" id="analyzeOutput"
+            style="display: none;">
+      197 -                    <h2>📊 Post Analysis</h2>                 
+      284 +                    <div class="output-title" style="margin-bo
+          +ttom: 24px;">                                                 
+      285 +                        <div class="output-title-icon">       
+      286 +                            <svg width="18" height="18" viewBo
+          +x="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
+          +2">                                                           
+      287 +                                <polyline points="20 6 9 17 4 
+          +12"/>                                                         
+      288 +                            </svg>                            
+      289 +                        </div>                                
+      290 +                        <h2>Post Analysis</h2>                
+      291 +                    </div>                                    
+      292  
+      293                      <!-- Score Cards -->
+      294                      <div class="score-grid">
+      201 -                        <div class="score-card">              
+      295 +                        <div class="score-card engagement-card
+          +">                                                            
+      296 +                            <div class="score-card-icon">     
+      297 +                                <svg width="22" height="22" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2" stroke-linecap="round" stroke-linejoin="round">        
+      298 +                                    <path d="M20.84 4.61a5.5 5
+          +.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.0
+          +6 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>  
+      299 +                                </svg>                        
+      300 +                            </div>                            
+      301                              <div class="score-label">Engagemen
+           t Score</div>
+      302                              <div class="score-value" id="engag
+           ementScore">-</div>
+      303                              <div class="score-meter">
+      304                                  <div class="score-fill" id="en
+           gagementFill"></div>
+      305                              </div>
+      306                          </div>
+      208 -                        <div class="score-card">              
+      307 +                        <div class="score-card readability-car
+          +d">                                                           
+      308 +                            <div class="score-card-icon">     
+      309 +                                <svg width="22" height="22" vi
+          +ewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
+          +th="2" stroke-linecap="round" stroke-linejoin="round">        
+      310 +                                    <path d="M2 3h6a4 4 0 0 1 
+          +4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3
+          + 3 0 0 1 3-3h7z"/>                                            
+      311 +                                </svg>                        
+      312 +                            </div>                            
+      313                              <div class="score-label">Readabili
+           ty Score</div>
+      314                              <div class="score-value" id="reada
+           bilityScore">-</div>
+      315                              <div class="score-meter">
+     ...
+      320  
+      321                      <!-- Predictions -->
+      322                      <div class="predictions-section">
+      219 -                        <h3>📈 Predicted Performance</h3>     
+      323 +                        <h3 class="section-title">            
+      324 +                            <svg width="18" height="18" viewBo
+          +x="0 0 24 24" fill="none" stroke="currentColor" stroke-width="
+          +2" stroke-linecap="round" stroke-linejoin="round">            
+      325 +                                <polyline points="22 12 18 12 
+          +15 21 9 3 6 12 2 12"/>                                        
+      326 +                            </svg>                            
+      327 +                            Predicted Performance             
+      328 +                        </h3>                                 
+      329                          <div class="prediction-grid">
+      330                              <div class="prediction-card">
+      222 -                                <span class="pred-icon">👍</sp
+          -an>                                                           
+      331 +                                <div class="pred-icon-wrap lik
+          +es-icon">                                                     
+      332 +                                    <svg width="20" height="20
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2" stroke-linecap="round" stroke-linejoin="round">    
+      333 +                                        <path d="M14 9V5a3 3 0
+          + 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H
+          +14z"/>                                                        
+      334 +                                        <path d="M7 22H4a2 2 0
+          + 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>                                
+      335 +                                    </svg>                    
+      336 +                                </div>                        
+      337                                  <span class="pred-label">Likes
+           </span>
+      338                                  <span class="pred-value" id="p
+           redLikes">-</span>
+      339                              </div>
+      340                              <div class="prediction-card">
+      227 -                                <span class="pred-icon">💬</sp
+          -an>                                                           
+      341 +                                <div class="pred-icon-wrap com
+          +ments-icon">                                                  
+      342 +                                    <svg width="20" height="20
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2" stroke-linecap="round" stroke-linejoin="round">    
+      343 +                                        <path d="M21 15a2 2 0 
+          +0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>           
+      344 +                                    </svg>                    
+      345 +                                </div>                        
+      346                                  <span class="pred-label">Comme
+           nts</span>
+      347                                  <span class="pred-value" id="p
+           redComments">-</span>
+      348                              </div>
+      349                              <div class="prediction-card">
+      232 -                                <span class="pred-icon">👁️</spa
+          -n>                                                            
+      350 +                                <div class="pred-icon-wrap rea
+          +ch-icon">                                                     
+      351 +                                    <svg width="20" height="20
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2" stroke-linecap="round" stroke-linejoin="round">    
+      352 +                                        <circle cx="12" cy="12
+          +" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="1
+          +2" r="2"/>                                                    
+      353 +                                    </svg>                    
+      354 +                                </div>                        
+      355                                  <span class="pred-label">Reach
+           </span>
+      356                                  <span class="pred-value" id="p
+           redReach">-</span>
+      357                              </div>
+      358                              <div class="prediction-card">
+      237 -                                <span class="pred-icon">🎯</sp
+          -an>                                                           
+      359 +                                <div class="pred-icon-wrap ton
+          +e-icon">                                                      
+      360 +                                    <svg width="20" height="20
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2" stroke-linecap="round" stroke-linejoin="round">    
+      361 +                                        <circle cx="12" cy="12
+          +" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="
+          +9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/> 
+      362 +                                    </svg>                    
+      363 +                                </div>                        
+      364                                  <span class="pred-label">Tone<
+           /span>
+      365                                  <span class="pred-value" id="p
+           redTone">-</span>
+      366                              </div>
+     ...
+      370                      <!-- Insights -->
+      371                      <div class="insights-section">
+      372                          <div class="insight-box strengths">
+      247 -                            <h3>✅ Strengths</h3>             
+      373 +                            <div class="insight-header">      
+      374 +                                <div class="insight-icon stren
+          +gths-icon">                                                   
+      375 +                                    <svg width="16" height="16
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2.5" stroke-linecap="round" stroke-linejoin="round">  
+      376 +                                        <polyline points="20 6
+          + 9 17 4 12"/>                                                 
+      377 +                                    </svg>                    
+      378 +                                </div>                        
+      379 +                                <h3>Strengths</h3>            
+      380 +                            </div>                            
+      381                              <ul id="strengthsList"></ul>
+      382                          </div>
+      383                          <div class="insight-box improvements">
+      251 -                            <h3>💡 Suggestions for Improvement
+          -</h3>                                                         
+      384 +                            <div class="insight-header">      
+      385 +                                <div class="insight-icon impro
+          +vements-icon">                                                
+      386 +                                    <svg width="16" height="16
+          +" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
+          +-width="2.5" stroke-linecap="round" stroke-linejoin="round">  
+      387 +                                        <circle cx="12" cy="12
+          +" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" 
+          +y1="16" x2="12.01" y2="16"/>                                  
+      388 +                                    </svg>                    
+      389 +                                </div>                        
+      390 +                                <h3>Suggestions</h3>          
+      391 +                            </div>                            
+      392                              <ul id="improvementsList"></ul>
+      393                          </div>
+      394                      </div>
+     ...
+      397  
+      398              <!-- Error Message -->
+      399              <div class="error-message" id="errorMessage" style
+           ="display: none;">
+      400 +                <svg width="18" height="18" viewBox="0 0 24 24
+          +" fill="none" stroke="currentColor" stroke-width="2">         
+      401 +                    <circle cx="12" cy="12" r="10"/><line x1="
+          +12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y
+          +2="16"/>                                                      
+      402 +                </svg>                                        
+      403                  <span id="errorText"></span>
+      404              </div>
+      405          </div>
+      406  
+      407          <!-- Footer -->
+      408          <footer class="footer">
+      266 -            <p>Built with ❤️ using Groq AI | By Viswajith - AI
+          - Developer</p>                                                
+      409 +            <p>Built with Flask &bull; Powered by <strong>Groq
+          + AI</strong> &bull; By Viswajith &mdash; AI Developer</p>     
+      410          </footer>
+      411      </div>
+      412  
+
+● Write(Project 1\static\style.css)
+  ⎿  Added 585 lines, removed 319 lines
+        5  }
+        6  
+        7  :root {
+        8 -    --bg-top: #fff4db;                                        
+        9 -    --bg-bottom: #ffd7c2;                                     
+       10 -    --surface: rgba(255, 252, 247, 0.88);                     
+       11 -    --surface-strong: #fffdf9;                                
+       12 -    --surface-muted: #fff6ee;                                 
+       13 -    --surface-soft: #fff1e4;                                  
+       14 -    --border: #f1d2bc;                                        
+       15 -    --border-strong: #e8b894;                                 
+       16 -    --text-primary: #2f1f1a;                                  
+       17 -    --text-secondary: #6e5244;                                
+       18 -    --accent: #d96c3f;                                        
+       19 -    --accent-strong: #b84e29;                                 
+       20 -    --accent-soft: #ffe0cf;                                   
+       21 -    --accent-gradient: linear-gradient(135deg, #d96c3f 0%, #f2
+          -9b56 100%);                                                   
+       22 -    --success: #1f8f63;                                       
+       23 -    --success-soft: #e4f7ef;                                  
+       24 -    --warning: #c97d1c;                                       
+       25 -    --warning-soft: #fff1d7;                                  
+       26 -    --danger: #b74b4b;                                        
+       27 -    --danger-soft: #fee8e6;                                   
+       28 -    --shadow-lg: 0 24px 60px rgba(129, 67, 39, 0.18);         
+       29 -    --shadow-md: 0 14px 30px rgba(178, 102, 57, 0.14);        
+        8 +    --bg: #0a0f1e;                                            
+        9 +    --surface: rgba(255, 255, 255, 0.04);                     
+       10 +    --surface-hover: rgba(255, 255, 255, 0.07);               
+       11 +    --surface-card: rgba(255, 255, 255, 0.06);                
+       12 +    --border: rgba(255, 255, 255, 0.1);                       
+       13 +    --border-strong: rgba(255, 255, 255, 0.18);               
+       14 +    --text-primary: #f0f4ff;                                  
+       15 +    --text-secondary: #8b9cc8;                                
+       16 +    --text-muted: #5a6b8f;                                    
+       17 +    --accent: #0077b5;                                        
+       18 +    --accent-light: #0ea5e9;                                  
+       19 +    --accent-glow: rgba(0, 119, 181, 0.4);                    
+       20 +    --green: #10b981;                                         
+       21 +    --green-soft: rgba(16, 185, 129, 0.12);                   
+       22 +    --green-border: rgba(16, 185, 129, 0.3);                  
+       23 +    --amber: #f59e0b;                                         
+       24 +    --amber-soft: rgba(245, 158, 11, 0.12);                   
+       25 +    --amber-border: rgba(245, 158, 11, 0.3);                  
+       26 +    --red: #ef4444;                                           
+       27 +    --red-soft: rgba(239, 68, 68, 0.12);                      
+       28 +    --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);                 
+       29 +    --radius: 16px;                                           
+       30 +    --radius-sm: 10px;                                        
+       31  }
+       32  
+       33  body {
+       33 -    font-family: 'Inter', -apple-system, BlinkMacSystemFont, '
+          -Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;     
+       34 -    background:                                               
+       35 -        radial-gradient(circle at top left, rgba(255, 255, 255
+          -, 0.72), transparent 32%),                                    
+       36 -        linear-gradient(135deg, var(--bg-top) 0%, var(--bg-bot
+          -tom) 100%);                                                   
+       34 +    font-family: 'Inter', -apple-system, BlinkMacSystemFont, '
+          +Segoe UI', sans-serif;                                        
+       35 +    background: var(--bg);                                    
+       36      min-height: 100vh;
+       38 -    padding: 20px;                                            
+       37 +    padding: 24px 16px 40px;                                  
+       38      color: var(--text-primary);
+       39 +    overflow-x: hidden;                                       
+       40  }
+       41  
+       42 +/* ── Background Orbs ─────────────────────────────────── */  
+       43 +.bg-orbs {                                                    
+       44 +    position: fixed;                                          
+       45 +    inset: 0;                                                 
+       46 +    pointer-events: none;                                     
+       47 +    z-index: 0;                                               
+       48 +    overflow: hidden;                                         
+       49 +}                                                             
+       50 +                                                              
+       51 +.orb {                                                        
+       52 +    position: absolute;                                       
+       53 +    border-radius: 50%;                                       
+       54 +    filter: blur(80px);                                       
+       55 +    opacity: 0.35;                                            
+       56 +}                                                             
+       57 +                                                              
+       58 +.orb-1 {                                                      
+       59 +    width: 500px;                                             
+       60 +    height: 500px;                                            
+       61 +    background: radial-gradient(circle, #0077b5, transparent 7
+          +0%);                                                          
+       62 +    top: -150px;                                              
+       63 +    left: -150px;                                             
+       64 +    animation: float1 12s ease-in-out infinite;               
+       65 +}                                                             
+       66 +                                                              
+       67 +.orb-2 {                                                      
+       68 +    width: 400px;                                             
+       69 +    height: 400px;                                            
+       70 +    background: radial-gradient(circle, #6366f1, transparent 7
+          +0%);                                                          
+       71 +    bottom: -100px;                                           
+       72 +    right: -100px;                                            
+       73 +    animation: float2 15s ease-in-out infinite;               
+       74 +}                                                             
+       75 +                                                              
+       76 +.orb-3 {                                                      
+       77 +    width: 300px;                                             
+       78 +    height: 300px;                                            
+       79 +    background: radial-gradient(circle, #10b981, transparent 7
+          +0%);                                                          
+       80 +    top: 50%;                                                 
+       81 +    left: 50%;                                                
+       82 +    transform: translate(-50%, -50%);                         
+       83 +    animation: float3 10s ease-in-out infinite;               
+       84 +}                                                             
+       85 +                                                              
+       86 +@keyframes float1 { 0%, 100% { transform: translate(0, 0); } 5
+          +0% { transform: translate(30px, 40px); } }                    
+       87 +@keyframes float2 { 0%, 100% { transform: translate(0, 0); } 5
+          +0% { transform: translate(-20px, -30px); } }                  
+       88 +@keyframes float3 { 0%, 100% { transform: translate(-50%, -50%
+          +); } 50% { transform: translate(-48%, -52%); } }              
+       89 +                                                              
+       90 +/* ── Container ───────────────────────────────────────── */  
+       91  .container {
+       43 -    max-width: 1200px;                                        
+       92 +    max-width: 1100px;                                        
+       93      margin: 0 auto;
+       94 +    position: relative;                                       
+       95 +    z-index: 1;                                               
+       96  }
+       97  
+       47 -/* Header */                                                  
+       98 +/* ── Header ──────────────────────────────────────────── */  
+       99  .header {
+      100      text-align: center;
+       50 -    margin-bottom: 30px;                                      
+       51 -    color: var(--text-primary);                               
+      101 +    margin-bottom: 36px;                                      
+      102  }
+      103  
+      104 +.header-inner {                                               
+      105 +    display: inline-flex;                                     
+      106 +    flex-direction: column;                                   
+      107 +    align-items: center;                                      
+      108 +    gap: 14px;                                                
+      109 +}                                                             
+      110 +                                                              
+      111  .logo {
+      112      display: flex;
+      113      align-items: center;
+      114 +    gap: 14px;                                                
+      115 +}                                                             
+      116 +                                                              
+      117 +.logo-icon {                                                  
+      118 +    width: 52px;                                              
+      119 +    height: 52px;                                             
+      120 +    background: linear-gradient(135deg, #0077b5, #0ea5e9);    
+      121 +    border-radius: 14px;                                      
+      122 +    display: flex;                                            
+      123 +    align-items: center;                                      
+      124      justify-content: center;
+       58 -    gap: 15px;                                                
+       59 -    margin-bottom: 10px;                                      
+      125 +    box-shadow: 0 8px 24px rgba(0, 119, 181, 0.4);            
+      126  }
+      127  
+       62 -.logo h1 {                                                    
+       63 -    font-size: 2.5rem;                                        
+       64 -    font-weight: 700;                                         
+      128 +.logo-text h1 {                                               
+      129 +    font-size: 2.2rem;                                        
+      130 +    font-weight: 800;                                         
+      131 +    background: linear-gradient(135deg, #f0f4ff 0%, #93c5fd 10
+          +0%);                                                          
+      132 +    -webkit-background-clip: text;                            
+      133 +    -webkit-text-fill-color: transparent;                     
+      134 +    background-clip: text;                                    
+      135 +    line-height: 1;                                           
+      136 +    margin-bottom: 6px;                                       
+      137  }
+      138  
+      139 +.live-badge {                                                 
+      140 +    display: inline-flex;                                     
+      141 +    align-items: center;                                      
+      142 +    gap: 6px;                                                 
+      143 +    background: rgba(16, 185, 129, 0.12);                     
+      144 +    border: 1px solid rgba(16, 185, 129, 0.3);                
+      145 +    color: #10b981;                                           
+      146 +    font-size: 0.75rem;                                       
+      147 +    font-weight: 600;                                         
+      148 +    padding: 4px 10px;                                        
+      149 +    border-radius: 20px;                                      
+      150 +    letter-spacing: 0.02em;                                   
+      151 +}                                                             
+      152 +                                                              
+      153 +.live-dot {                                                   
+      154 +    width: 6px;                                               
+      155 +    height: 6px;                                              
+      156 +    background: #10b981;                                      
+      157 +    border-radius: 50%;                                       
+      158 +    animation: pulse 2s ease-in-out infinite;                 
+      159 +}                                                             
+      160 +                                                              
+      161 +@keyframes pulse {                                            
+      162 +    0%, 100% { opacity: 1; transform: scale(1); }             
+      163 +    50% { opacity: 0.5; transform: scale(0.85); }             
+      164 +}                                                             
+      165 +                                                              
+      166  .subtitle {
+       68 -    font-size: 1.1rem;                                        
+      167 +    font-size: 1rem;                                          
+      168      color: var(--text-secondary);
+      169 +    font-weight: 400;                                         
+      170  }
+      171  
+       72 -/* Tabs */                                                    
+      172 +/* ── Tabs ────────────────────────────────────────────── */  
+      173  .tabs {
+      174      display: flex;
+       75 -    gap: 10px;                                                
+       76 -    margin-bottom: 30px;                                      
+       77 -    background: rgba(255, 250, 244, 0.72);                    
+       78 -    padding: 8px;                                             
+       79 -    border-radius: 16px;                                      
+       80 -    backdrop-filter: blur(14px);                              
+       81 -    border: 1px solid rgba(255, 255, 255, 0.55);              
+       82 -    box-shadow: var(--shadow-md);                             
+      175 +    gap: 6px;                                                 
+      176 +    margin-bottom: 24px;                                      
+      177 +    background: rgba(255, 255, 255, 0.04);                    
+      178 +    padding: 6px;                                             
+      179 +    border-radius: var(--radius);                             
+      180 +    border: 1px solid var(--border);                          
+      181 +    backdrop-filter: blur(20px);                              
+      182  }
+      183  
+      184  .tab-btn {
+     ...
+      187      align-items: center;
+      188      justify-content: center;
+      189      gap: 8px;
+       91 -    padding: 14px 20px;                                       
+      190 +    padding: 13px 20px;                                       
+      191      border: none;
+       93 -    border-radius: 12px;                                      
+      192 +    border-radius: var(--radius-sm);                          
+      193      background: transparent;
+      194      color: var(--text-secondary);
+      195      font-weight: 600;
+       97 -    font-size: 1rem;                                          
+      196 +    font-size: 0.9rem;                                        
+      197      cursor: pointer;
+       99 -    transition: all 0.3s ease;                                
+      198 +    transition: all 0.25s ease;                               
+      199 +    font-family: inherit;                                     
+      200  }
+      201  
+      202  .tab-btn:hover {
+      103 -    background: rgba(255, 255, 255, 0.58);                    
+      203 +    background: var(--surface-hover);                         
+      204      color: var(--text-primary);
+      205  }
+      206  
+      207  .tab-btn.active {
+      108 -    background: var(--surface-strong);                        
+      109 -    color: var(--accent-strong);                              
+      110 -    box-shadow: 0 8px 18px rgba(164, 91, 49, 0.14);           
+      208 +    background: linear-gradient(135deg, #0077b5, #0ea5e9);    
+      209 +    color: #fff;                                              
+      210 +    box-shadow: 0 4px 16px rgba(0, 119, 181, 0.4);            
+      211  }
+      212  
+      113 -.tab-icon {                                                   
+      114 -    font-size: 1.3rem;                                        
+      213 +/* ── Main Content ────────────────────────────────────── */  
+      214 +.main-content {                                               
+      215 +    background: rgba(255, 255, 255, 0.04);                    
+      216 +    border-radius: 20px;                                      
+      217 +    padding: 36px;                                            
+      218 +    border: 1px solid var(--border);                          
+      219 +    backdrop-filter: blur(20px);                              
+      220 +    box-shadow: var(--shadow);                                
+      221  }
+      222  
+      117 -/* Tab Content */                                             
+      223 +/* ── Tab Content ─────────────────────────────────────── */  
+      224  .tab-content {
+      225      display: none;
+      226  }
+      227  
+      228  .tab-content.active {
+      229      display: block;
+      124 -    animation: fadeIn 0.4s ease;                              
+      230 +    animation: fadeUp 0.35s ease;                             
+      231  }
+      232  
+      127 -/* Main Content */                                            
+      128 -.main-content {                                               
+      129 -    background: var(--surface);                               
+      130 -    border-radius: 20px;                                      
+      131 -    padding: 40px;                                            
+      132 -    box-shadow: var(--shadow-lg);                             
+      133 -    border: 1px solid rgba(255, 255, 255, 0.7);               
+      134 -    backdrop-filter: blur(16px);                              
+      233 +@keyframes fadeUp {                                           
+      234 +    from { opacity: 0; transform: translateY(12px); }         
+      235 +    to   { opacity: 1; transform: translateY(0); }            
+      236  }
+      237  
+      137 -/* Form Group */                                              
+      238 +/* ── Form Group ──────────────────────────────────────── */  
+      239  .form-group {
+      139 -    margin-bottom: 30px;                                      
+      240 +    margin-bottom: 28px;                                      
+      241  }
+      242  
+      243  .form-group label {
+     ...
+      245      font-weight: 600;
+      246      margin-bottom: 10px;
+      247      color: var(--text-primary);
+      147 -    font-size: 1rem;                                          
+      248 +    font-size: 0.95rem;                                       
+      249  }
+      250  
+      251  textarea {
+      252      width: 100%;
+      152 -    padding: 15px;                                            
+      153 -    border: 2px solid var(--border);                          
+      154 -    background: rgba(255, 255, 255, 0.82);                    
+      253 +    padding: 16px;                                            
+      254 +    border: 1px solid var(--border);                          
+      255 +    background: rgba(255, 255, 255, 0.05);                    
+      256      color: var(--text-primary);
+      156 -    border-radius: 12px;                                      
+      257 +    border-radius: var(--radius-sm);                          
+      258      font-family: inherit;
+      158 -    font-size: 1rem;                                          
+      259 +    font-size: 0.95rem;                                       
+      260      resize: vertical;
+      160 -    transition: all 0.3s ease;                                
+      261 +    transition: all 0.25s ease;                               
+      262 +    line-height: 1.6;                                         
+      263  }
+      264  
+      265 +textarea::placeholder {                                       
+      266 +    color: var(--text-muted);                                 
+      267 +}                                                             
+      268 +                                                              
+      269  textarea:focus {
+      270      outline: none;
+      165 -    border-color: var(--accent);                              
+      166 -    box-shadow: 0 0 0 4px rgba(217, 108, 63, 0.14);           
+      271 +    border-color: var(--accent-light);                        
+      272 +    background: rgba(14, 165, 233, 0.05);                     
+      273 +    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);           
+      274  }
+      275  
+      169 -/* Post Types */                                              
+      276 +/* ── Post Type Buttons ───────────────────────────────── */  
+      277  .post-types {
+      278      display: grid;
+      172 -    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)
+          -);                                                            
+      173 -    gap: 15px;                                                
+      279 +    grid-template-columns: repeat(4, 1fr);                    
+      280 +    gap: 12px;                                                
+      281  }
+      282  
+      283  .post-type-btn {
+      284      display: flex;
+      285      flex-direction: column;
+      286      align-items: center;
+      180 -    gap: 8px;                                                 
+      181 -    padding: 20px;                                            
+      182 -    border: 2px solid var(--border);                          
+      183 -    border-radius: 12px;                                      
+      184 -    background: rgba(255, 255, 255, 0.86);                    
+      185 -    color: var(--text-primary);                               
+      287 +    gap: 10px;                                                
+      288 +    padding: 20px 14px;                                       
+      289 +    border: 1px solid var(--border);                          
+      290 +    border-radius: var(--radius-sm);                          
+      291 +    background: rgba(255, 255, 255, 0.04);                    
+      292 +    color: var(--text-secondary);                             
+      293      cursor: pointer;
+      187 -    transition: all 0.3s ease;                                
+      188 -    font-size: 0.95rem;                                       
+      294 +    transition: all 0.25s ease;                               
+      295 +    font-size: 0.88rem;                                       
+      296      font-weight: 500;
+      297 +    font-family: inherit;                                     
+      298  }
+      299  
+      300  .post-type-btn:hover {
+      193 -    border-color: var(--accent);                              
+      301 +    border-color: var(--accent-light);                        
+      302 +    color: var(--text-primary);                               
+      303 +    background: rgba(14, 165, 233, 0.08);                     
+      304      transform: translateY(-2px);
+      195 -    box-shadow: 0 10px 22px rgba(217, 108, 63, 0.18);         
+      305  }
+      306  
+      307  .post-type-btn.active {
+      308      border-color: transparent;
+      200 -    background: var(--accent-gradient);                       
+      201 -    color: white;                                             
+      309 +    background: linear-gradient(135deg, #0077b5, #0ea5e9);    
+      310 +    color: #fff;                                              
+      311 +    box-shadow: 0 6px 20px rgba(0, 119, 181, 0.35);           
+      312 +    transform: translateY(-2px);                              
+      313  }
+      314  
+      204 -.post-type-btn .icon {                                        
+      205 -    font-size: 2rem;                                          
+      315 +.post-type-icon {                                             
+      316 +    display: flex;                                            
+      317 +    align-items: center;                                      
+      318 +    justify-content: center;                                  
+      319 +    opacity: 0.9;                                             
+      320  }
+      321  
+      208 -/* Generate Button */                                         
+      209 -.generate-btn {                                               
+      322 +/* ── Primary Button ──────────────────────────────────── */  
+      323 +.primary-btn {                                                
+      324      width: 100%;
+      211 -    padding: 18px;                                            
+      212 -    background: var(--accent-gradient);                       
+      325 +    padding: 16px;                                            
+      326 +    background: linear-gradient(135deg, #0077b5, #0ea5e9);    
+      327      color: white;
+      328      border: none;
+      215 -    border-radius: 12px;                                      
+      216 -    font-size: 1.1rem;                                        
+      329 +    border-radius: var(--radius-sm);                          
+      330 +    font-size: 1rem;                                          
+      331      font-weight: 600;
+      332      cursor: pointer;
+      219 -    transition: all 0.3s ease;                                
+      333 +    transition: all 0.25s ease;                               
+      334 +    font-family: inherit;                                     
+      335 +    display: flex;                                            
+      336 +    align-items: center;                                      
+      337 +    justify-content: center;                                  
+      338 +    box-shadow: 0 4px 20px rgba(0, 119, 181, 0.35);           
+      339  }
+      340  
+      222 -.generate-btn:hover {                                         
+      341 +.primary-btn:hover {                                          
+      342      transform: translateY(-2px);
+      224 -    box-shadow: 0 14px 28px rgba(217, 108, 63, 0.28);         
+      343 +    box-shadow: 0 8px 28px rgba(0, 119, 181, 0.5);            
+      344  }
+      345  
+      227 -.generate-btn:disabled {                                      
+      228 -    opacity: 0.7;                                             
+      346 +.primary-btn:disabled {                                       
+      347 +    opacity: 0.65;                                            
+      348      cursor: not-allowed;
+      349      transform: none;
+      350  }
+      351  
+      233 -/* Spinner Animation */                                       
+      352 +.btn-text,                                                    
+      353 +.btn-loader {                                                 
+      354 +    display: flex;                                            
+      355 +    align-items: center;                                      
+      356 +    gap: 8px;                                                 
+      357 +}                                                             
+      358 +                                                              
+      359 +/* ── Spinner ─────────────────────────────────────────── */  
+      360  .spinner {
+      235 -    animation: rotate 2s linear infinite;                     
+      236 -    width: 24px;                                              
+      237 -    height: 24px;                                             
+      361 +    animation: rotate 1.5s linear infinite;                   
+      362 +    width: 20px;                                              
+      363 +    height: 20px;                                             
+      364  }
+      365  
+      366  .spinner .path {
+     ...
+      369      animation: dash 1.5s ease-in-out infinite;
+      370  }
+      371  
+      246 -@keyframes rotate {                                           
+      247 -    100% { transform: rotate(360deg); }                       
+      248 -}                                                             
+      249 -                                                              
+      372 +@keyframes rotate { 100% { transform: rotate(360deg); } }     
+      373  @keyframes dash {
+      251 -    0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }    
+      252 -    50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
+      374 +    0%   { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }  
+      375 +    50%  { stroke-dasharray: 90, 150; stroke-dashoffset: -35; 
+          +}                                                             
+      376      100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124;
+            }
+      377  }
+      378  
+      256 -@keyframes fadeIn {                                           
+      257 -    from { opacity: 0; transform: translateY(10px); }         
+      258 -    to { opacity: 1; transform: translateY(0); }              
+      259 -}                                                             
+      260 -                                                              
+      261 -/* Output Section */                                          
+      379 +/* ── Output Section ──────────────────────────────────── */  
+      380  .output-section {
+      263 -    margin-top: 40px;                                         
+      264 -    padding-top: 40px;                                        
+      265 -    border-top: 2px solid var(--border);                      
+      266 -    animation: fadeIn 0.5s ease;                              
+      381 +    margin-top: 36px;                                         
+      382 +    padding-top: 36px;                                        
+      383 +    border-top: 1px solid var(--border);                      
+      384 +    animation: fadeUp 0.4s ease;                              
+      385  }
+      386  
+      387  .output-header {
+     ...
+      390      align-items: center;
+      391      margin-bottom: 20px;
+      392      flex-wrap: wrap;
+      275 -    gap: 15px;                                                
+      393 +    gap: 14px;                                                
+      394  }
+      395  
+      278 -.output-header h2 {                                           
+      279 -    font-size: 1.5rem;                                        
+      396 +.output-title {                                               
+      397 +    display: flex;                                            
+      398 +    align-items: center;                                      
+      399 +    gap: 10px;                                                
+      400 +}                                                             
+      401 +                                                              
+      402 +.output-title h2 {                                            
+      403 +    font-size: 1.25rem;                                       
+      404 +    font-weight: 700;                                         
+      405      color: var(--text-primary);
+      406  }
+      407  
+      408 +.output-title-icon {                                          
+      409 +    width: 32px;                                              
+      410 +    height: 32px;                                             
+      411 +    background: linear-gradient(135deg, #0077b5, #0ea5e9);    
+      412 +    border-radius: 8px;                                       
+      413 +    display: flex;                                            
+      414 +    align-items: center;                                      
+      415 +    justify-content: center;                                  
+      416 +    color: white;                                             
+      417 +    flex-shrink: 0;                                           
+      418 +}                                                             
+      419 +                                                              
+      420 +/* ── Action Buttons ──────────────────────────────────── */  
+      421  .output-actions {
+      422      display: flex;
+      285 -    gap: 10px;                                                
+      423 +    gap: 8px;                                                 
+      424      flex-wrap: wrap;
+      425  }
+      426  
+      427  .action-btn {
+      290 -    display: flex;                                            
+      428 +    display: inline-flex;                                     
+      429      align-items: center;
+      430      gap: 6px;
+      293 -    padding: 10px 16px;                                       
+      294 -    border: 2px solid var(--border);                          
+      431 +    padding: 9px 15px;                                        
+      432 +    border: 1px solid var(--border);                          
+      433      border-radius: 8px;
+      296 -    background: rgba(255, 255, 255, 0.86);                    
+      434 +    background: rgba(255, 255, 255, 0.05);                    
+      435      color: var(--text-secondary);
+      436      font-weight: 500;
+      437 +    font-size: 0.85rem;                                       
+      438      cursor: pointer;
+      300 -    transition: all 0.3s ease;                                
+      439 +    transition: all 0.22s ease;                               
+      440 +    font-family: inherit;                                     
+      441  }
+      442  
+      443  .action-btn:hover {
+      304 -    border-color: var(--accent);                              
+      305 -    color: var(--accent-strong);                              
+      306 -    background: var(--accent-soft);                           
+      444 +    border-color: var(--accent-light);                        
+      445 +    color: var(--accent-light);                               
+      446 +    background: rgba(14, 165, 233, 0.08);                     
+      447  }
+      448  
+      449  .action-btn.full-width {
+      450      width: 100%;
+      451      justify-content: center;
+      312 -    margin-top: 15px;                                         
+      452 +    margin-top: 16px;                                         
+      453 +    padding: 12px;                                            
+      454  }
+      455  
+      315 -/* Post Preview */                                            
+      456 +/* ── Post Preview ────────────────────────────────────── */  
+      457  .post-preview {
+      317 -    background: var(--surface-muted);                         
+      318 -    border: 2px solid #f3dfce;                                
+      319 -    border-radius: 12px;                                      
+      320 -    padding: 25px;                                            
+      321 -    margin-bottom: 15px;                                      
+      458 +    background: rgba(255, 255, 255, 0.04);                    
+      459 +    border: 1px solid var(--border);                          
+      460 +    border-radius: var(--radius-sm);                          
+      461 +    padding: 24px;                                            
+      462 +    margin-bottom: 14px;                                      
+      463  }
+      464  
+      465 +.preview-profile {                                            
+      466 +    display: flex;                                            
+      467 +    align-items: center;                                      
+      468 +    gap: 12px;                                                
+      469 +    margin-bottom: 16px;                                      
+      470 +    padding-bottom: 16px;                                     
+      471 +    border-bottom: 1px solid var(--border);                   
+      472 +}                                                             
+      473 +                                                              
+      474 +.preview-avatar {                                             
+      475 +    width: 44px;                                              
+      476 +    height: 44px;                                             
+      477 +    background: linear-gradient(135deg, #0077b5, #0ea5e9);    
+      478 +    border-radius: 50%;                                       
+      479 +    display: flex;                                            
+      480 +    align-items: center;                                      
+      481 +    justify-content: center;                                  
+      482 +    font-weight: 700;                                         
+      483 +    font-size: 1.1rem;                                        
+      484 +    color: white;                                             
+      485 +    flex-shrink: 0;                                           
+      486 +}                                                             
+      487 +                                                              
+      488 +.preview-name {                                               
+      489 +    font-weight: 600;                                         
+      490 +    font-size: 0.95rem;                                       
+      491 +    color: var(--text-primary);                               
+      492 +}                                                             
+      493 +                                                              
+      494 +.preview-role {                                               
+      495 +    font-size: 0.78rem;                                       
+      496 +    color: var(--text-muted);                                 
+      497 +    margin-top: 2px;                                          
+      498 +}                                                             
+      499 +                                                              
+      500  .post-content {
+      325 -    font-size: 1rem;                                          
+      326 -    line-height: 1.7;                                         
+      501 +    font-size: 0.95rem;                                       
+      502 +    line-height: 1.75;                                        
+      503      color: var(--text-primary);
+      504      white-space: pre-wrap;
+      505  }
+      506  
+      507  .char-count {
+      508      text-align: right;
+      333 -    color: var(--text-secondary);                             
+      334 -    font-size: 0.9rem;                                        
+      335 -    margin-bottom: 20px;                                      
+      509 +    color: var(--text-muted);                                 
+      510 +    font-size: 0.82rem;                                       
+      511 +    margin-bottom: 16px;                                      
+      512  }
+      513  
+      338 -/* Comparison Grid (Before/After) */                          
+      514 +/* ── Hashtags ────────────────────────────────────────── */  
+      515 +#hashtagsDisplay {                                            
+      516 +    margin-top: 20px;                                         
+      517 +    padding: 20px;                                            
+      518 +    background: rgba(255, 255, 255, 0.04);                    
+      519 +    border: 1px solid var(--border);                          
+      520 +    border-radius: var(--radius-sm);                          
+      521 +}                                                             
+      522 +                                                              
+      523 +#hashtagsDisplay h3 {                                         
+      524 +    margin-bottom: 14px;                                      
+      525 +    color: var(--text-primary);                               
+      526 +    font-size: 1rem;                                          
+      527 +}                                                             
+      528 +                                                              
+      529 +.hashtag-list {                                               
+      530 +    display: flex;                                            
+      531 +    flex-wrap: wrap;                                          
+      532 +    gap: 10px;                                                
+      533 +}                                                             
+      534 +                                                              
+      535 +.hashtag-chip {                                               
+      536 +    display: inline-flex;                                     
+      537 +    align-items: center;                                      
+      538 +    gap: 6px;                                                 
+      539 +    padding: 7px 14px;                                        
+      540 +    background: rgba(0, 119, 181, 0.1);                       
+      541 +    border: 1px solid rgba(0, 119, 181, 0.3);                 
+      542 +    border-radius: 20px;                                      
+      543 +    color: #60b8e0;                                           
+      544 +    font-weight: 500;                                         
+      545 +    font-size: 0.85rem;                                       
+      546 +    cursor: pointer;                                          
+      547 +    transition: all 0.2s ease;                                
+      548 +}                                                             
+      549 +                                                              
+      550 +.hashtag-chip:hover {                                         
+      551 +    background: rgba(0, 119, 181, 0.25);                      
+      552 +    border-color: var(--accent-light);                        
+      553 +    color: var(--text-primary);                               
+      554 +}                                                             
+      555 +                                                              
+      556 +.hashtag-chip .badge {                                        
+      557 +    font-size: 0.7rem;                                        
+      558 +    padding: 2px 7px;                                         
+      559 +    border-radius: 10px;                                      
+      560 +    font-weight: 600;                                         
+      561 +    background: rgba(255, 255, 255, 0.15);                    
+      562 +    color: white;                                             
+      563 +}                                                             
+      564 +                                                              
+      565 +/* ── Comparison Grid ─────────────────────────────────── */  
+      566  .comparison-grid {
+      567      display: grid;
+      341 -    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)
+          -);                                                            
+      342 -    gap: 20px;                                                
+      343 -    margin-top: 20px;                                         
+      568 +    grid-template-columns: 1fr 1fr;                           
+      569 +    gap: 16px;                                                
+      570 +    margin-top: 4px;                                          
+      571  }
+      572  
+      573  .comparison-card {
+      347 -    border: 2px solid var(--border);                          
+      348 -    border-radius: 12px;                                      
+      574 +    border: 1px solid var(--border);                          
+      575 +    border-radius: var(--radius-sm);                          
+      576      padding: 20px;
+      350 -    background: rgba(255, 253, 249, 0.9);                     
+      577 +    background: rgba(255, 255, 255, 0.04);                    
+      578  }
+      579  
+      353 -.comparison-card.improved {                                   
+      354 -    border-color: #7fc7a5;                                    
+      355 -    background: var(--success-soft);                          
+      580 +.improved-card {                                              
+      581 +    border-color: var(--green-border);                        
+      582 +    background: var(--green-soft);                            
+      583  }
+      584  
+      358 -.comparison-card h3 {                                         
+      359 -    margin-bottom: 15px;                                      
+      360 -    color: var(--text-primary);                               
+      361 -    font-size: 1.1rem;                                        
+      585 +.comparison-card-header {                                     
+      586 +    display: flex;                                            
+      587 +    align-items: center;                                      
+      588 +    gap: 8px;                                                 
+      589 +    font-weight: 600;                                         
+      590 +    font-size: 0.88rem;                                       
+      591 +    margin-bottom: 14px;                                      
+      592 +    padding-bottom: 12px;                                     
+      593 +    border-bottom: 1px solid var(--border);                   
+      594  }
+      595  
+      364 -/* Score Grid */                                              
+      596 +.comparison-card-header.original {                            
+      597 +    color: var(--text-secondary);                             
+      598 +}                                                             
+      599 +                                                              
+      600 +.comparison-card-header.improved {                            
+      601 +    color: var(--green);                                      
+      602 +}                                                             
+      603 +                                                              
+      604 +/* ── Score Grid ──────────────────────────────────────── */  
+      605  .score-grid {
+      606      display: grid;
+      367 -    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)
+          -);                                                            
+      368 -    gap: 20px;                                                
+      369 -    margin-bottom: 30px;                                      
+      607 +    grid-template-columns: 1fr 1fr;                           
+      608 +    gap: 16px;                                                
+      609 +    margin-bottom: 28px;                                      
+      610  }
+      611  
+      612  .score-card {
+      373 -    background: linear-gradient(135deg, #c85f36 0%, #ef9a52 10
+          -0%);                                                          
+      374 -    padding: 25px;                                            
+      375 -    border-radius: 16px;                                      
+      376 -    color: white;                                             
+      613 +    padding: 24px;                                            
+      614 +    border-radius: var(--radius-sm);                          
+      615 +    border: 1px solid var(--border);                          
+      616 +    background: rgba(255, 255, 255, 0.05);                    
+      617      text-align: center;
+      378 -    box-shadow: 0 14px 24px rgba(201, 110, 58, 0.22);         
+      618 +    position: relative;                                       
+      619 +    overflow: hidden;                                         
+      620  }
+      621  
+      381 -.score-label {                                                
+      382 -    font-size: 0.9rem;                                        
+      383 -    opacity: 0.9;                                             
+      622 +.score-card::before {                                         
+      623 +    content: '';                                              
+      624 +    position: absolute;                                       
+      625 +    inset: 0;                                                 
+      626 +    opacity: 0.06;                                            
+      627 +    pointer-events: none;                                     
+      628 +}                                                             
+      629 +                                                              
+      630 +.engagement-card::before {                                    
+      631 +    background: linear-gradient(135deg, #0077b5, #0ea5e9);    
+      632 +}                                                             
+      633 +                                                              
+      634 +.readability-card::before {                                   
+      635 +    background: linear-gradient(135deg, #6366f1, #8b5cf6);    
+      636 +}                                                             
+      637 +                                                              
+      638 +.score-card-icon {                                            
+      639 +    display: flex;                                            
+      640 +    justify-content: center;                                  
+      641      margin-bottom: 10px;
+      642 +    color: var(--text-secondary);                             
+      643  }
+      644  
+      645 +.engagement-card .score-card-icon { color: #60b8e0; }         
+      646 +.readability-card .score-card-icon { color: #a78bfa; }        
+      647 +                                                              
+      648 +.score-label {                                                
+      649 +    font-size: 0.82rem;                                       
+      650 +    color: var(--text-muted);                                 
+      651 +    margin-bottom: 8px;                                       
+      652 +    font-weight: 500;                                         
+      653 +    text-transform: uppercase;                                
+      654 +    letter-spacing: 0.04em;                                   
+      655 +}                                                             
+      656 +                                                              
+      657  .score-value {
+      388 -    font-size: 3rem;                                          
+      389 -    font-weight: 700;                                         
+      390 -    margin-bottom: 15px;                                      
+      658 +    font-size: 2.8rem;                                        
+      659 +    font-weight: 800;                                         
+      660 +    margin-bottom: 16px;                                      
+      661 +    line-height: 1;                                           
+      662  }
+      663  
+      664 +.engagement-card .score-value { color: #60b8e0; }             
+      665 +.readability-card .score-value { color: #a78bfa; }            
+      666 +                                                              
+      667  .score-meter {
+      394 -    height: 8px;                                              
+      395 -    background: rgba(255, 255, 255, 0.3);                     
+      668 +    height: 6px;                                              
+      669 +    background: rgba(255, 255, 255, 0.1);                     
+      670      border-radius: 10px;
+      671      overflow: hidden;
+      672  }
+      673  
+      674  .score-fill {
+      675      height: 100%;
+      402 -    background: white;                                        
+      676      border-radius: 10px;
+      404 -    transition: width 0.8s ease;                              
+      677 +    width: 0;                                                 
+      678 +    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);        
+      679  }
+      680  
+      407 -/* Predictions Section */                                     
+      681 +.engagement-card .score-fill { background: linear-gradient(90d
+          +eg, #0077b5, #60b8e0); }                                      
+      682 +.readability-card .score-fill { background: linear-gradient(90
+          +deg, #6366f1, #a78bfa); }                                     
+      683 +                                                              
+      684 +/* ── Predictions ─────────────────────────────────────── */  
+      685  .predictions-section {
+      409 -    margin-bottom: 30px;                                      
+      686 +    margin-bottom: 28px;                                      
+      687  }
+      688  
+      412 -.predictions-section h3 {                                     
+      413 -    margin-bottom: 20px;                                      
+      689 +.section-title {                                              
+      690 +    display: flex;                                            
+      691 +    align-items: center;                                      
+      692 +    gap: 8px;                                                 
+      693 +    margin-bottom: 16px;                                      
+      694 +    font-size: 1rem;                                          
+      695 +    font-weight: 700;                                         
+      696      color: var(--text-primary);
+      415 -    font-size: 1.3rem;                                        
+      697  }
+      698  
+      699  .prediction-grid {
+      700      display: grid;
+      420 -    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)
+          -);                                                            
+      421 -    gap: 15px;                                                
+      701 +    grid-template-columns: repeat(4, 1fr);                    
+      702 +    gap: 12px;                                                
+      703  }
+      704  
+      705  .prediction-card {
+      706      display: flex;
+      707      flex-direction: column;
+      708      align-items: center;
+      428 -    gap: 8px;                                                 
+      429 -    padding: 20px;                                            
+      430 -    background: var(--surface-soft);                          
+      431 -    border: 2px solid #f0d9c8;                                
+      432 -    border-radius: 12px;                                      
+      709 +    gap: 10px;                                                
+      710 +    padding: 20px 14px;                                       
+      711 +    background: rgba(255, 255, 255, 0.04);                    
+      712 +    border: 1px solid var(--border);                          
+      713 +    border-radius: var(--radius-sm);                          
+      714      text-align: center;
+      715 +    transition: border-color 0.2s;                            
+      716  }
+      717  
+      436 -.pred-icon {                                                  
+      437 -    font-size: 2rem;                                          
+      718 +.prediction-card:hover {                                      
+      719 +    border-color: var(--border-strong);                       
+      720  }
+      721  
+      722 +.pred-icon-wrap {                                             
+      723 +    width: 42px;                                              
+      724 +    height: 42px;                                             
+      725 +    border-radius: 10px;                                      
+      726 +    display: flex;                                            
+      727 +    align-items: center;                                      
+      728 +    justify-content: center;                                  
+      729 +}                                                             
+      730 +                                                              
+      731 +.likes-icon    { background: rgba(239, 68, 68, 0.12); color: #
+          +f87171; }                                                     
+      732 +.comments-icon { background: rgba(0, 119, 181, 0.12); color: #
+          +60b8e0; }                                                     
+      733 +.reach-icon    { background: rgba(16, 185, 129, 0.12); color: 
+          +#34d399; }                                                    
+      734 +.tone-icon     { background: rgba(245, 158, 11, 0.12); color: 
+          +#fbbf24; }                                                    
+      735 +                                                              
+      736  .pred-label {
+      441 -    font-size: 0.85rem;                                       
+      442 -    color: var(--text-secondary);                             
+      737 +    font-size: 0.78rem;                                       
+      738 +    color: var(--text-muted);                                 
+      739      font-weight: 500;
+      740 +    text-transform: uppercase;                                
+      741 +    letter-spacing: 0.04em;                                   
+      742  }
+      743  
+      744  .pred-value {
+      447 -    font-size: 1.2rem;                                        
+      745 +    font-size: 1.1rem;                                        
+      746      font-weight: 700;
+      449 -    color: var(--accent-strong);                              
+      747 +    color: var(--text-primary);                               
+      748  }
+      749  
+      452 -/* Insights Section */                                        
+      750 +/* ── Insights ────────────────────────────────────────── */  
+      751  .insights-section {
+      752      display: grid;
+      455 -    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)
+          -);                                                            
+      456 -    gap: 20px;                                                
+      753 +    grid-template-columns: 1fr 1fr;                           
+      754 +    gap: 16px;                                                
+      755  }
+      756  
+      757  .insight-box {
+      460 -    padding: 25px;                                            
+      461 -    border-radius: 12px;                                      
+      462 -    border: 2px solid var(--border);                          
+      758 +    padding: 22px;                                            
+      759 +    border-radius: var(--radius-sm);                          
+      760 +    border: 1px solid var(--border);                          
+      761 +    background: rgba(255, 255, 255, 0.04);                    
+      762  }
+      763  
+      764  .insight-box.strengths {
+      466 -    background: var(--success-soft);                          
+      467 -    border-color: #85c6a6;                                    
+      765 +    border-color: var(--green-border);                        
+      766 +    background: var(--green-soft);                            
+      767  }
+      768  
+      769  .insight-box.improvements {
+      471 -    background: var(--warning-soft);                          
+      472 -    border-color: #e2b46d;                                    
+      770 +    border-color: var(--amber-border);                        
+      771 +    background: var(--amber-soft);                            
+      772  }
+      773  
+      475 -.insight-box h3 {                                             
+      476 -    margin-bottom: 15px;                                      
+      477 -    font-size: 1.1rem;                                        
+      774 +.insight-header {                                             
+      775 +    display: flex;                                            
+      776 +    align-items: center;                                      
+      777 +    gap: 10px;                                                
+      778 +    margin-bottom: 16px;                                      
+      779  }
+      780  
+      480 -.insight-box ul {                                             
+      481 -    list-style: none;                                         
+      482 -    padding: 0;                                               
+      483 -}                                                             
+      484 -                                                              
+      485 -.insight-box ul li {                                          
+      486 -    padding: 10px 0;                                          
+      487 -    border-bottom: 1px solid rgba(0, 0, 0, 0.05);             
+      488 -    line-height: 1.6;                                         
+      489 -}                                                             
+      490 -                                                              
+      491 -.insight-box ul li:last-child {                               
+      492 -    border-bottom: none;                                      
+      493 -}                                                             
+      494 -                                                              
+      495 -.insight-box ul li::before {                                  
+      496 -    margin-right: 10px;                                       
+      497 -}                                                             
+      498 -                                                              
+      499 -.insight-box.strengths ul li::before {                        
+      500 -    content: "✅";                                            
+      501 -}                                                             
+      502 -                                                              
+      503 -.insight-box.improvements ul li::before {                     
+      504 -    content: "💡";                                            
+      505 -}                                                             
+      506 -                                                              
+      507 -/* Hashtags Display */                                        
+      508 -#hashtagsDisplay {                                            
+      509 -    margin-top: 20px;                                         
+      510 -    padding: 20px;                                            
+      511 -    background: var(--surface-soft);                          
+      512 -    border: 2px solid #f0d9c8;                                
+      513 -    border-radius: 12px;                                      
+      514 -}                                                             
+      515 -                                                              
+      516 -#hashtagsDisplay h3 {                                         
+      517 -    margin-bottom: 15px;                                      
+      781 +.insight-header h3 {                                          
+      782 +    font-size: 0.95rem;                                       
+      783 +    font-weight: 700;                                         
+      784      color: var(--text-primary);
+      785  }
+      786  
+      521 -.hashtag-list {                                               
+      787 +.insight-icon {                                               
+      788 +    width: 28px;                                              
+      789 +    height: 28px;                                             
+      790 +    border-radius: 7px;                                       
+      791      display: flex;
+      523 -    flex-wrap: wrap;                                          
+      524 -    gap: 10px;                                                
+      525 -}                                                             
+      526 -                                                              
+      527 -.hashtag-chip {                                               
+      528 -    display: inline-flex;                                     
+      792      align-items: center;
+      530 -    gap: 6px;                                                 
+      531 -    padding: 8px 15px;                                        
+      532 -    background: rgba(255, 255, 255, 0.92);                    
+      533 -    border: 2px solid var(--accent);                          
+      534 -    border-radius: 20px;                                      
+      535 -    color: var(--accent-strong);                              
+      536 -    font-weight: 500;                                         
+      537 -    font-size: 0.9rem;                                        
+      538 -    cursor: pointer;                                          
+      539 -    transition: all 0.2s ease;                                
+      793 +    justify-content: center;                                  
+      794 +    flex-shrink: 0;                                           
+      795  }
+      796  
+      542 -.hashtag-chip:hover {                                         
+      543 -    background: var(--accent);                                
+      544 -    color: white;                                             
+      545 -}                                                             
+      797 +.strengths-icon    { background: var(--green-border); color: v
+          +ar(--green); }                                                
+      798 +.improvements-icon { background: var(--amber-border); color: v
+          +ar(--amber); }                                                
+      799  
+      547 -.hashtag-chip .badge {                                        
+      548 -    font-size: 0.75rem;                                       
+      549 -    padding: 2px 6px;                                         
+      550 -    background: var(--accent);                                
+      551 -    color: white;                                             
+      552 -    border-radius: 10px;                                      
+      800 +.insight-box ul {                                             
+      801 +    list-style: none;                                         
+      802 +    padding: 0;                                               
+      803 +    display: flex;                                            
+      804 +    flex-direction: column;                                   
+      805 +    gap: 10px;                                                
+      806  }
+      807  
+      555 -.hashtag-chip:hover .badge {                                  
+      556 -    background: white;                                        
+      557 -    color: var(--accent-strong);                              
+      808 +.insight-box ul li {                                          
+      809 +    padding: 10px 12px;                                       
+      810 +    background: rgba(255, 255, 255, 0.04);                    
+      811 +    border-radius: 8px;                                       
+      812 +    line-height: 1.55;                                        
+      813 +    font-size: 0.88rem;                                       
+      814 +    color: var(--text-secondary);                             
+      815 +    border: 1px solid rgba(255, 255, 255, 0.05);              
+      816 +    position: relative;                                       
+      817 +    padding-left: 28px;                                       
+      818  }
+      819  
+      560 -/* Error Message */                                           
+      820 +.insight-box.strengths ul li::before { content: "✓"; position:
+          + absolute; left: 10px; color: var(--green); font-weight: 700; 
+          +}                                                             
+      821 +.insight-box.improvements ul li::before { content: "→"; positi
+          +on: absolute; left: 10px; color: var(--amber); font-weight: 70
+          +0; }                                                          
+      822 +                                                              
+      823 +/* ── Error Message ───────────────────────────────────── */  
+      824  .error-message {
+      825      margin-top: 20px;
+      563 -    padding: 15px;                                            
+      564 -    background: var(--danger-soft);                           
+      565 -    border: 2px solid #f3b7b3;                                
+      566 -    border-radius: 8px;                                       
+      567 -    color: var(--danger);                                     
+      568 -    animation: shake 0.5s ease;                               
+      826 +    padding: 14px 18px;                                       
+      827 +    background: var(--red-soft);                              
+      828 +    border: 1px solid rgba(239, 68, 68, 0.3);                 
+      829 +    border-radius: 10px;                                      
+      830 +    color: #f87171;                                           
+      831 +    font-size: 0.9rem;                                        
+      832 +    display: flex;                                            
+      833 +    align-items: center;                                      
+      834 +    gap: 10px;                                                
+      835 +    animation: shake 0.4s ease;                               
+      836  }
+      837  
+      838  @keyframes shake {
+      839      0%, 100% { transform: translateX(0); }
+      573 -    25% { transform: translateX(-10px); }                     
+      574 -    75% { transform: translateX(10px); }                      
+      840 +    25% { transform: translateX(-6px); }                      
+      841 +    75% { transform: translateX(6px); }                       
+      842  }
+      843  
+      577 -/* Footer */                                                  
+      844 +/* ── Footer ──────────────────────────────────────────── */  
+      845  .footer {
+      846      text-align: center;
+      580 -    margin-top: 30px;                                         
+      847 +    margin-top: 28px;                                         
+      848 +    color: var(--text-muted);                                 
+      849 +    font-size: 0.82rem;                                       
+      850 +}                                                             
+      851 +                                                              
+      852 +.footer strong {                                              
+      853      color: var(--text-secondary);
+      582 -    font-size: 0.9rem;                                        
+      854  }
+      855  
+      585 -/* Responsive */                                              
+      856 +/* ── Responsive ──────────────────────────────────────── */  
+      857  @media (max-width: 768px) {
+      587 -    .main-content {                                           
+      588 -        padding: 25px;                                        
+      589 -    }                                                         
+      858 +    body { padding: 16px 12px 32px; }                         
+      859  
+      591 -    .logo h1 {                                                
+      592 -        font-size: 2rem;                                      
+      593 -    }                                                         
+      860 +    .logo-text h1 { font-size: 1.7rem; }                      
+      861  
+      595 -    .tabs {                                                   
+      596 -        flex-direction: column;                               
+      597 -    }                                                         
+      862 +    .main-content { padding: 24px 18px; }                     
+      863  
+      599 -    .tab-btn {                                                
+      600 -        width: 100%;                                          
+      601 -    }                                                         
+      864 +    .tabs { flex-direction: column; }                         
+      865  
+      603 -    .post-types {                                             
+      604 -        grid-template-columns: repeat(2, 1fr);                
+      605 -    }                                                         
+      866 +    .post-types { grid-template-columns: repeat(2, 1fr); }    
+      867  
+      607 -    .output-header {                                          
+      608 -        flex-direction: column;                               
+      609 -        align-items: flex-start;                              
+      610 -    }                                                         
+      868 +    .comparison-grid,                                         
+      869 +    .score-grid,                                              
+      870 +    .insights-section { grid-template-columns: 1fr; }         
+      871  
+      612 -    .score-value {                                            
+      613 -        font-size: 2.5rem;                                    
+      614 -    }                                                         
+      872 +    .prediction-grid { grid-template-columns: repeat(2, 1fr); 
+          +}                                                             
+      873  
+      616 -    .comparison-grid {                                        
+      617 -        grid-template-columns: 1fr;                           
+      618 -    }                                                         
+      874 +    .output-header { flex-direction: column; align-items: flex
+          +-start; }                                                     
+      875 +                                                              
+      876 +    .output-actions { width: 100%; }                          
+      877 +                                                              
+      878 +    .action-btn { flex: 1; justify-content: center; }         
+      879  }
+      880 +                                                              
+      881 +@media (max-width: 480px) {                                   
+      882 +    .logo { flex-direction: column; text-align: center; }     
+      883 +    .post-types { grid-template-columns: repeat(2, 1fr); }    
+      884 +    .prediction-grid { grid-template-columns: repeat(2, 1fr); 
+          +}                                                             
+      885 +}                                                             
+
+● Done! The frontend is completely redesigned. Here's what changed:
+
+  Design overhaul:
+  - Dark navy theme (#0a0f1e) — modern, professional look
+  - LinkedIn-blue gradient accent (#0077b5 → #0ea5e9)
+  - Animated glowing orbs in the background
+  - Glassmorphism cards with backdrop-filter: blur
+
+  Header:
+  - LinkedIn logo icon with gradient
+  - Gradient text title
+  - Pulsing "Powered by Groq AI" live badge
+
+  Tabs:
+  - SVG icons instead of emojis
+  - Active tab gets full blue gradient with glow shadow
+
+  Post type buttons:
+  - SVG icons, cleaner look
+  - Active state: blue gradient with lift effect
+
+  Generate output:
+  - Fake LinkedIn profile preview (avatar with "V" for Viswajith) above the post
+
+  Analyze tab:
+  - Color-coded score cards (blue for engagement, purple for readability)
+  - Icon-based prediction cards with colored icon backgrounds
+  - Cleaner strength/suggestion boxes
+
+  Restart the app and refresh the browser to see it!
+
+✻ Worked for 2m 58s
+
+> /export                                                                       
+  ⎿  Conversation copied to clipboard
