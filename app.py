@@ -12,7 +12,22 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+_client = None
+
+
+def get_client():
+    """Build the Groq client on first use.
+
+    Created lazily rather than at import time so a missing API key surfaces as a
+    clean error on /analyze instead of crashing the whole app on startup.
+    """
+    global _client
+    if _client is None:
+        api_key = os.getenv("GROQ_API_KEY")
+        if not api_key:
+            raise RuntimeError("GROQ_API_KEY is not set")
+        _client = Groq(api_key=api_key)
+    return _client
 
 
 @app.route("/")
@@ -62,7 +77,7 @@ Job Description:
 - verdict: single string summary (1-2 sentences, encouraging tone)
 Return ONLY the JSON object, no markdown, no explanation."""
 
-        response = client.chat.completions.create(
+        response = get_client().chat.completions.create(
             model="openai/gpt-oss-120b",
             messages=[
                 {"role": "system", "content": system_prompt},
